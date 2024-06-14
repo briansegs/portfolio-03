@@ -5,11 +5,11 @@ import {
   RxLinkedinLogo,
   RxGithubLogo,
 } from "react-icons/rx";
-import { navLinks } from "@/constants";
 import { Button } from "./ui/button";
 import ButtonDark from "./ButtonDark";
 import ButtonNav from "./ButtonNav";
 import ButtonSocial from "./ButtonSocial";
+import { navLinks } from "@/constants";
 
 const Nav = () => {
   return (
@@ -42,6 +42,10 @@ const Nav = () => {
 
             <ButtonDark title={"Hire Me"} />
           </div>
+        </div>
+
+        <div className="hidden cursor-pointer rounded-lg bg-white p-[7px] text-3xl shadow-sm hover:bg-blue-50 max-lg:block">
+          <RxHamburgerMenu />
         </div>
       </nav>
     </header>
