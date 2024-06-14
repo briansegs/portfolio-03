@@ -18,7 +18,7 @@
     margin: 0 auto;
   }
 
-  .hero-header {
+  .hero-h1 {
     font-size: 124px;
     font-weight: 700;
     letter-spacing: -7px;
@@ -57,5 +57,9 @@
 
   .button {
     @apply px-3 py-[10px] font-jost text-base font-semibold capitalize tracking-[-0.4px];
+  }
+
+  .button-social {
+    @apply bg-white p-[7px] text-3xl text-black;
   }
 }
