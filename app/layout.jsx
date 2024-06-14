@@ -2,7 +2,7 @@ import "./globals.css";
 
 // Components
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Nav from "@/components/Nav";
 
 export const metadata = {
   title: "Portfolio 03",
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="relative font-crimson">
-        <Header />
+        <Nav className="padding-x absolute z-10 w-full py-8" />
         {children}
         <Footer />
       </body>

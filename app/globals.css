@@ -54,4 +54,8 @@
   .padding-b {
     @apply sm:pb-24 pb-12;
   }
+
+  .button {
+    @apply px-3 py-[10px] font-jost text-base font-semibold capitalize tracking-[-0.4px];
+  }
 }
