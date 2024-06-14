@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./pages/**/*.{js,jsx}",
@@ -16,7 +17,7 @@ module.exports = {
         primary: "#ECEEFF",
       },
       backgroundImage: {
-        hero: "url(assets/hero/avatar_01.png)",
+        hero: "url('/bg_01.png')",
       },
       screens: {
         wide: "1440px",

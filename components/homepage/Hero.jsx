@@ -2,7 +2,9 @@ import ButtonDark from "../ButtonDark";
 
 const Hero = () => {
   return (
-    <section className="max-container flex min-h-screen w-full flex-col justify-center gap-10 p-2 xl:flex-row">
+    <section className="max-container flex min-h-screen w-full flex-col justify-center gap-10 xl:flex-row">
+      <div className="relative flex min-h-screen w-full bg-hero bg-center bg-no-repeat"></div>
+
       <div className="max-xl:padding-x relative flex w-full flex-col items-start justify-center pt-28 xl:w-2/5">
         <p className="text-[28px] tracking-[-1px] text-red-400">
           Open for work!
@@ -16,8 +18,6 @@ const Hero = () => {
         </p>
         <ButtonDark title={"Hire Me"} />
       </div>
-
-      <div></div>
     </section>
   );
 };
