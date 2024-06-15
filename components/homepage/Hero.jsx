@@ -36,7 +36,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="max-xl:padding-x relative flex w-full flex-col items-start justify-center xl:w-2/5">
+      <div className="max-xl:padding-x relative flex w-full flex-col items-start justify-center xl:w-3/5">
         <p className="text-2xl font-medium tracking-[-1px] text-primary">
           Open for work!
         </p>
@@ -53,7 +53,7 @@ const Hero = () => {
             Download CV
           </Button>
 
-          <ButtonDark title={"Hire Me"} />
+          <ButtonDark title={"Lets Chat"} />
         </div>
       </div>
     </section>
