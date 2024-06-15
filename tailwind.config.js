@@ -10,11 +10,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        jost: ["Jost"],
-        crimson: ["Crimson"],
+        primary: ["Mulish"],
+        secondary: ["Crimson"],
       },
       colors: {
-        primary: "#ECEEFF",
+        primary: "#f87171",
+        secondary: "#eff6ff",
       },
       backgroundImage: {
         hero: "url('/bg_01.png')",

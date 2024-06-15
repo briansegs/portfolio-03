@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="relative font-crimson">
+      <body className="relative font-secondary">
         <Nav className="padding-x absolute z-10 w-full py-8" />
         {children}
         <Footer />

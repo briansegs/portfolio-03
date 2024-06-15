@@ -17,9 +17,9 @@ const Nav = () => {
       <nav className="max-container flex items-center justify-between">
         <div className="flex items-center gap-2 rounded-lg bg-white p-[7px] shadow-sm">
           <Link href={"/"}>
-            <Button className=" bg-black px-3 py-[7px] font-crimson text-2xl font-semibold text-white hover:bg-black">
+            <Button className=" bg-black px-3 py-[7px] font-secondary text-2xl font-semibold text-white hover:bg-black">
               Brian
-              <span className="pl-1 text-red-400">.</span>
+              <span className="pl-1 text-primary">.</span>
             </Button>
           </Link>
 
@@ -44,7 +44,7 @@ const Nav = () => {
           </div>
         </div>
 
-        <div className="hidden cursor-pointer rounded-lg bg-white p-[7px] text-3xl shadow-sm hover:bg-blue-50 max-lg:block">
+        <div className="hidden cursor-pointer rounded-lg bg-white p-[7px] text-3xl shadow-sm hover:bg-secondary max-lg:block">
           <RxHamburgerMenu />
         </div>
       </nav>

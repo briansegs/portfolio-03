@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Jost:wght@100..900&display=swap");
 
 @tailwind base;
@@ -26,13 +26,6 @@
   .max-container {
     max-width: 1440px;
     margin: 0 auto;
-  }
-
-  .hero-h1 {
-    font-size: 124px;
-    font-weight: 700;
-    letter-spacing: -7px;
-    line-height: 120px;
   }
 }
 
@@ -66,7 +59,7 @@
   }
 
   .button {
-    @apply px-3 py-[10px] font-jost text-base font-semibold capitalize tracking-[-0.4px];
+    @apply px-3 py-[10px] font-primary text-lg font-bold capitalize tracking-[-0.4px];
   }
 
   .button-social {
