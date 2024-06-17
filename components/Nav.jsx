@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   RxCross1,
@@ -10,8 +12,11 @@ import ButtonDark from "./ButtonDark";
 import ButtonNav from "./ButtonNav";
 import ButtonSocial from "./ButtonSocial";
 import { navLinks } from "@/constants";
+import { useState } from "react";
 
 const Nav = () => {
+  const [sideMenu, setSideMenu] = useState(false);
+
   return (
     <header className="padding-x absolute z-10 w-full py-8">
       <nav className="max-container flex items-center justify-between">
@@ -42,9 +47,46 @@ const Nav = () => {
           </div>
         </div>
 
-        <div className="hidden cursor-pointer rounded-lg bg-white p-[7px] text-3xl shadow-sm hover:bg-secondary max-lg:block">
-          <RxHamburgerMenu />
-        </div>
+        {sideMenu ? (
+          <>
+            <div className="absolute inset-0 h-screen w-screen bg-slate-950 opacity-75" />
+            <div
+              onClick={() => setSideMenu(false)}
+              className="absolute inset-x-[5%] top-9 mx-3 flex-col rounded-lg bg-white shadow-sm"
+            >
+              <div className="flex cursor-pointer justify-end border-b border-gray-300  p-4 text-3xl">
+                <RxCross1 />
+              </div>
+
+              <div className="mb-12 mt-8 flex flex-col items-center gap-4">
+                {navLinks.map((link) => (
+                  <Link href={link.path} key={link.name}>
+                    <Button className="bg-transparent p-7 font-primary text-4xl font-black capitalize tracking-[-0.4px] text-black hover:bg-secondary">
+                      {link.name}
+                    </Button>
+                  </Link>
+                ))}
+              </div>
+
+              <div className="flex justify-center gap-2 border-t border-gray-300 py-4">
+                <Link href={"/"}>
+                  <ButtonSocial icon={<RxGithubLogo />} />
+                </Link>
+
+                <Link href={"/"}>
+                  <ButtonSocial icon={<RxLinkedinLogo />} />
+                </Link>
+              </div>
+            </div>
+          </>
+        ) : (
+          <button
+            onClick={() => setSideMenu(true)}
+            className="hidden cursor-pointer rounded-lg bg-transparent p-[7px] text-3xl hover:bg-secondary max-lg:block"
+          >
+            <RxHamburgerMenu />
+          </button>
+        )}
       </nav>
     </header>
   );
