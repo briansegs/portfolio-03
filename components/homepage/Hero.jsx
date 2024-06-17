@@ -26,17 +26,19 @@ const Hero = () => {
 
   return (
     <section className="max-container flex min-h-screen w-full flex-col justify-center gap-10 xl:flex-row">
+      {/* Left image */}
       <div className="relative flex min-h-screen w-full bg-hero bg-center bg-no-repeat">
         {init && <Particles options={particlesOptions} />}
 
         <Image
           src={avatar}
           alt="avatar"
-          className="absolute bottom-0 left-[5%] right-0 mx-auto w-[95%] object-contain mix-blend-screen"
+          className="absolute bottom-0 left-[5%] right-0 mx-auto w-[95%] object-contain mix-blend-screen xl:h-[95%]"
         />
       </div>
 
-      <div className="max-xl:padding-x relative flex w-full flex-col items-start justify-center xl:w-3/5">
+      {/* Right text */}
+      <div className="max-xl:padding-x relative flex w-full flex-col items-start justify-center xl:mt-14 xl:w-3/5">
         <p className="text-2xl font-medium tracking-[-1px] text-primary">
           Open for work!
         </p>
