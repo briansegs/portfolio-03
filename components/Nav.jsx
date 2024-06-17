@@ -15,11 +15,11 @@ const Nav = () => {
   return (
     <header className="padding-x absolute z-10 w-full py-8">
       <nav className="max-container flex items-center justify-between">
-        <div className="flex items-center gap-2 rounded-lg bg-white p-[7px] shadow-sm">
+        <div className="flex items-center gap-4 rounded-lg bg-transparent px-[7px]">
           <Link href={"/"}>
-            <Button className=" bg-black px-3 py-[7px] font-secondary text-2xl font-semibold text-white hover:bg-black">
+            <Button className=" h-full bg-black px-5 py-[7px] font-primary text-4xl font-extrabold text-white hover:bg-black">
               Brian
-              <span className="pl-1 text-primary">.</span>
+              <span className="pl-2 text-primary">.</span>
             </Button>
           </Link>
 
@@ -33,14 +33,12 @@ const Nav = () => {
         </div>
 
         <div className="flex flex-1 items-center justify-center max-lg:hidden">
-          <div className="flex max-w-max gap-2 rounded-lg bg-white p-[7px] shadow-sm">
+          <div className="flex max-w-max gap-8 rounded-lg bg-transparent p-[7px]">
             {navLinks.map((link) => (
               <Link href={link.path} key={link.name}>
                 <ButtonNav title={link.name} />
               </Link>
             ))}
-
-            <ButtonDark title={"Hire Me"} />
           </div>
         </div>
 
