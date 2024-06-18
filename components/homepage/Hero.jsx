@@ -7,7 +7,7 @@ import { loadFull } from "tsparticles";
 import particlesOptions from "../../constants/particles_config.json";
 import ButtonDark from "../ButtonDark";
 import avatar from "../../assets/hero/avatar_03.png";
-import { Button } from "../ui/button";
+import ButtonBase from "../ButtonBase";
 
 const Hero = () => {
   const [init, setInit] = useState(false);
@@ -52,9 +52,10 @@ const Hero = () => {
         </p>
 
         <div className="flex items-center gap-4">
-          <Button className="border-2 border-black bg-white px-3 py-[10px] font-primary text-lg font-bold capitalize tracking-[-0.4px] text-black hover:bg-black hover:text-white">
-            Download CV
-          </Button>
+          <ButtonBase
+            title={"Download CV"}
+            styles="border-2 border-black bg-white px-[12px] py-[4px] text-lg font-bold tracking-[-0.4px] text-black hover:bg-black hover:text-white"
+          />
 
           <ButtonDark title={"Hire Me"} />
         </div>
