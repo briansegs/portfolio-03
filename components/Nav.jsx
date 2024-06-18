@@ -9,7 +9,7 @@ import {
 } from "react-icons/rx";
 import { Button } from "./ui/button";
 import ButtonSocial from "./ButtonSocial";
-import { navLinks } from "@/constants";
+import { navLinks, socialLinks } from "@/constants";
 import ButtonBase from "./ButtonBase";
 
 const Nav = () => {
@@ -36,13 +36,11 @@ const Nav = () => {
             </Button>
           </Link>
 
-          <Link href={"/"}>
-            <ButtonSocial icon={<RxGithubLogo />} />
-          </Link>
-
-          <Link href={"/"}>
-            <ButtonSocial icon={<RxLinkedinLogo />} />
-          </Link>
+          {socialLinks.map((social) => (
+            <Link target="_blank" href={social.href} key={social.name}>
+              <ButtonSocial icon={social.icon} />
+            </Link>
+          ))}
         </div>
 
         <div className="flex flex-1 items-center justify-center max-lg:hidden">
@@ -81,13 +79,11 @@ const Nav = () => {
               </div>
 
               <div className="flex justify-center gap-2 border-t border-gray-300 py-4">
-                <Link href={"/"}>
-                  <ButtonSocial icon={<RxGithubLogo />} />
-                </Link>
-
-                <Link href={"/"}>
-                  <ButtonSocial icon={<RxLinkedinLogo />} />
-                </Link>
+                {socialLinks.map((social) => (
+                  <Link target="_blank" href={social.href} key={social.name}>
+                    <ButtonSocial icon={social.icon} />
+                  </Link>
+                ))}
               </div>
             </div>
           </>
