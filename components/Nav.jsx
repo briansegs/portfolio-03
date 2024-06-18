@@ -1,12 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import {
-  RxCross1,
-  RxHamburgerMenu,
-  RxLinkedinLogo,
-  RxGithubLogo,
-} from "react-icons/rx";
+import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { Button } from "./ui/button";
 import ButtonSocial from "./ButtonSocial";
 import { navLinks, socialLinks } from "@/constants";
@@ -30,10 +25,12 @@ const Nav = () => {
       <nav className="max-container flex items-center justify-between">
         <div className="flex items-center gap-4 rounded-lg bg-transparent px-[7px]">
           <Link href={"/"}>
-            <Button className=" h-full bg-black px-5 py-[7px] font-primary text-4xl font-extrabold text-white hover:bg-black">
-              Brian
+            <ButtonBase
+              title={"Brian"}
+              styles=" h-full bg-black px-5 py-[7px] font-primary text-4xl font-extrabold text-white"
+            >
               <span className="pl-2 text-primary">.</span>
-            </Button>
+            </ButtonBase>
           </Link>
 
           {socialLinks.map((social) => (
