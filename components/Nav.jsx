@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import {
   RxCross1,
@@ -8,10 +8,9 @@ import {
   RxGithubLogo,
 } from "react-icons/rx";
 import { Button } from "./ui/button";
-import ButtonDark from "./ButtonDark";
-import ButtonNav from "./ButtonNav";
 import ButtonSocial from "./ButtonSocial";
 import { navLinks } from "@/constants";
+import ButtonBase from "./ButtonBase";
 
 const Nav = () => {
   const [sideMenu, setSideMenu] = useState(false);
@@ -50,7 +49,10 @@ const Nav = () => {
           <div className="flex max-w-max gap-8 rounded-lg bg-transparent p-[7px]">
             {navLinks.map((link) => (
               <Link href={link.path} key={link.name}>
-                <ButtonNav title={link.name} />
+                <ButtonBase
+                  title={link.name}
+                  styles="px-[12px] tracking-[-0.4px] text-lg bg-transparent text-black hover:bg-secondary font-bold"
+                />
               </Link>
             ))}
           </div>
@@ -70,9 +72,10 @@ const Nav = () => {
               <div className="mb-12 mt-8 flex flex-col items-center gap-4">
                 {navLinks.map((link) => (
                   <Link href={link.path} key={link.name}>
-                    <Button className="bg-transparent p-7 font-primary text-4xl font-black capitalize tracking-[-0.4px] text-black hover:bg-secondary">
-                      {link.name}
-                    </Button>
+                    <ButtonBase
+                      title={link.name}
+                      styles="bg-transparent px-[20px] text-4xl font-black tracking-[-0.7px] text-black hover:bg-secondary"
+                    />
                   </Link>
                 ))}
               </div>
