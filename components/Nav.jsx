@@ -1,5 +1,5 @@
 "use client";
-
+import React, { useState } from "react";
 import Link from "next/link";
 import {
   RxCross1,
@@ -12,10 +12,19 @@ import ButtonDark from "./ButtonDark";
 import ButtonNav from "./ButtonNav";
 import ButtonSocial from "./ButtonSocial";
 import { navLinks } from "@/constants";
-import { useState } from "react";
 
 const Nav = () => {
   const [sideMenu, setSideMenu] = useState(false);
+
+  const handleClick = () => {
+    if (sideMenu) {
+      setSideMenu(false);
+      document.body.style.overflow = "auto";
+    } else {
+      setSideMenu(true);
+      document.body.style.overflow = "hidden";
+    }
+  };
 
   return (
     <header className="padding-x absolute z-10 w-full py-8">
@@ -49,9 +58,9 @@ const Nav = () => {
 
         {sideMenu ? (
           <>
-            <div className="absolute inset-0 h-screen w-screen bg-slate-950 opacity-75" />
+            <div className="absolute inset-0 h-screen w-full bg-slate-950 opacity-75" />
             <div
-              onClick={() => setSideMenu(false)}
+              onClick={handleClick}
               className="absolute inset-x-[5%] top-9 mx-3 flex-col rounded-lg bg-white shadow-sm"
             >
               <div className="flex cursor-pointer justify-end border-b border-gray-300  p-4 text-3xl">
@@ -81,7 +90,7 @@ const Nav = () => {
           </>
         ) : (
           <button
-            onClick={() => setSideMenu(true)}
+            onClick={handleClick}
             className="hidden cursor-pointer rounded-lg bg-transparent p-[7px] text-3xl hover:bg-secondary max-lg:block"
           >
             <RxHamburgerMenu />
