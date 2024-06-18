@@ -51,7 +51,7 @@ const Nav = () => {
               <Link href={link.path} key={link.name}>
                 <ButtonBase
                   title={link.name}
-                  styles="px-[12px] tracking-[-0.4px] text-lg bg-transparent text-black hover:bg-secondary font-bold"
+                  styles="px-[12px] py-[6px] tracking-[-0.4px] text-lg bg-transparent text-black hover:bg-secondary font-bold"
                 />
               </Link>
             ))}
@@ -74,7 +74,7 @@ const Nav = () => {
                   <Link href={link.path} key={link.name}>
                     <ButtonBase
                       title={link.name}
-                      styles="bg-transparent px-[20px] text-4xl font-black tracking-[-0.7px] text-black hover:bg-secondary"
+                      styles="bg-transparent py-[6px] px-[20px] text-4xl font-black tracking-[-0.7px] text-black hover:bg-secondary"
                     />
                   </Link>
                 ))}

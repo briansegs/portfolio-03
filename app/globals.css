@@ -57,12 +57,4 @@
   .padding-b {
     @apply sm:pb-24 pb-12;
   }
-
-  .button {
-    @apply py-[6px] font-primary capitalize rounded-md;
-  }
-
-  .button-social {
-    @apply bg-transparent p-[7px] text-3xl text-black;
-  }
 }
