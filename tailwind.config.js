@@ -23,6 +23,19 @@ module.exports = {
       screens: {
         wide: "1440px",
       },
+      keyframes: {
+        slide: {
+          from: {
+            transform: "translateX(-106.5%)",
+          },
+          to: {
+            transform: "translateX(0%)",
+          },
+        },
+      },
+      animation: {
+        slide: "slide 35s linear infinite",
+      },
     },
   },
   plugins: [],
