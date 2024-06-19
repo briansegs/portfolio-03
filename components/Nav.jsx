@@ -7,9 +7,9 @@ import SideMenu from "./nav/SideMenu";
 const Nav = () => {
   return (
     <header className="padding-x absolute z-10 w-full py-8">
-      <nav className="max-container flex items-center justify-between">
+      <nav className="max-container flex items-start  justify-between sm:items-center">
         {/* Logo / Social links */}
-        <div className="flex items-center gap-4 rounded-lg bg-transparent px-[7px]">
+        <div className="flex flex-col gap-8 rounded-lg bg-transparent px-[7px] sm:flex-row sm:items-center sm:gap-4">
           <Link href={"/"}>
             <ButtonBase
               title={"Brian"}
@@ -20,7 +20,12 @@ const Nav = () => {
           </Link>
 
           {socialLinks.map((social) => (
-            <Link target="_blank" href={social.href} key={social.name}>
+            <Link
+              className=""
+              target="_blank"
+              href={social.href}
+              key={social.name}
+            >
               <ButtonSocial icon={social.icon} />
             </Link>
           ))}

@@ -54,7 +54,7 @@ const SideMenu = () => {
   ) : (
     <button
       onClick={handleClick}
-      className="hidden cursor-pointer rounded-lg bg-transparent p-[7px] text-3xl hover:bg-secondary max-lg:block"
+      className="mt-2 hidden cursor-pointer rounded-lg bg-transparent p-[7px] text-3xl hover:bg-secondary max-lg:block sm:mt-0"
     >
       <RxHamburgerMenu />
     </button>
