@@ -29,6 +29,7 @@ const logos = [
     name: "React",
     icon: <RiReactjsFill />,
     hover: "hover:text-[#61DBFB]",
+    animate: "animate-[spin_20s_linear_infinite]",
   },
   {
     name: "Next.js",
@@ -60,9 +61,13 @@ const Services = () => {
                 {logo.name}
               </p>
               <div
-                className={`flex flex-col items-center justify-center gap-2 rounded-lg border border-black p-6 opacity-40 hover:opacity-100 ${logo.hover}`}
+                className={`flex flex-col items-center justify-center gap-2 rounded-lg border border-black p-6 opacity-30 hover:opacity-100 ${logo.hover}`}
               >
-                <div className={`text-8xl `}>{logo.icon}</div>
+                <div
+                  className={`text-8xl ${logo.animate && logo.animate} will-change-contents`}
+                >
+                  {logo.icon}
+                </div>
               </div>
             </div>
           ))}
