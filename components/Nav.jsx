@@ -20,12 +20,7 @@ const Nav = () => {
           </Link>
 
           {socialLinks.map((social) => (
-            <Link
-              className=""
-              target="_blank"
-              href={social.href}
-              key={social.name}
-            >
+            <Link target="_blank" href={social.href} key={social.name}>
               <ButtonSocial icon={social.icon} />
             </Link>
           ))}
