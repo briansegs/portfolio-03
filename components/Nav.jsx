@@ -1,52 +1,47 @@
 import Link from "next/link";
-import {
-  RxCross1,
-  RxHamburgerMenu,
-  RxLinkedinLogo,
-  RxGithubLogo,
-} from "react-icons/rx";
-import { Button } from "./ui/button";
-import ButtonDark from "./ButtonDark";
-import ButtonNav from "./ButtonNav";
 import ButtonSocial from "./ButtonSocial";
-import { navLinks } from "@/constants";
+import { navLinks, socialLinks } from "@/constants";
+import ButtonBase from "./ButtonBase";
+import SideMenu from "./nav/SideMenu";
 
 const Nav = () => {
   return (
     <header className="padding-x absolute z-10 w-full py-8">
-      <nav className="max-container flex items-center justify-between">
-        <div className="flex items-center gap-2 rounded-lg bg-white p-[7px] shadow-sm">
+      <nav className="max-container flex items-start  justify-between sm:items-center">
+        {/* Logo / Social links */}
+        <div className="flex flex-col gap-8 rounded-lg bg-transparent px-[7px] sm:flex-row sm:items-center sm:gap-4">
           <Link href={"/"}>
-            <Button className=" bg-black px-3 py-[7px] font-secondary text-2xl font-semibold text-white hover:bg-black">
-              Brian
-              <span className="pl-1 text-primary">.</span>
-            </Button>
+            <ButtonBase
+              title={"Brian"}
+              styles=" h-full bg-black px-5 py-[7px] font-primary text-4xl font-extrabold text-white"
+            >
+              <span className="pl-2 text-primary">.</span>
+            </ButtonBase>
           </Link>
 
-          <Link href={"/"}>
-            <ButtonSocial icon={<RxGithubLogo />} />
-          </Link>
-
-          <Link href={"/"}>
-            <ButtonSocial icon={<RxLinkedinLogo />} />
-          </Link>
+          {socialLinks.map((social) => (
+            <Link target="_blank" href={social.href} key={social.name}>
+              <ButtonSocial icon={social.icon} />
+            </Link>
+          ))}
         </div>
 
+        {/* Navigation links */}
         <div className="flex flex-1 items-center justify-center max-lg:hidden">
-          <div className="flex max-w-max gap-2 rounded-lg bg-white p-[7px] shadow-sm">
+          <div className="flex max-w-max gap-8 rounded-lg bg-transparent p-[7px]">
             {navLinks.map((link) => (
               <Link href={link.path} key={link.name}>
-                <ButtonNav title={link.name} />
+                <ButtonBase
+                  title={link.name}
+                  styles="px-[12px] py-[6px] tracking-[-0.4px] text-lg bg-transparent text-black hover:bg-secondary font-bold"
+                />
               </Link>
             ))}
-
-            <ButtonDark title={"Hire Me"} />
           </div>
         </div>
 
-        <div className="hidden cursor-pointer rounded-lg bg-white p-[7px] text-3xl shadow-sm hover:bg-secondary max-lg:block">
-          <RxHamburgerMenu />
-        </div>
+        {/* Side burger menu overlay  */}
+        {<SideMenu />}
       </nav>
     </header>
   );
