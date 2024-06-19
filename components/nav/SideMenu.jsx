@@ -25,7 +25,7 @@ const SideMenu = () => {
       {/* Background */}
       <div className="absolute inset-0 h-screen w-full bg-slate-950 opacity-75" />
 
-      {/*  */}
+      {/* Menu */}
       <div className="absolute inset-x-[5%] top-9 mx-3 flex-col rounded-lg bg-white shadow-sm">
         <div className="flex justify-end border-b border-gray-300 p-4 text-3xl">
           <RxCross1 className="cursor-pointer" onClick={handleClick} />
