@@ -14,10 +14,10 @@ export default function Home() {
         <Hero />
       </section>
       <section className="padding">
-        <About />
+        <Services />
       </section>
       <section className="padding">
-        <Services />
+        <About />
       </section>
       <section className="padding">
         <Projects />

@@ -13,9 +13,9 @@ const Nav = () => {
           <Link href={"/"}>
             <ButtonBase
               title={"Brian"}
-              styles=" h-full bg-black px-5 py-[7px] font-primary text-4xl font-extrabold text-white"
+              styles=" h-full bg-transparent px-5 py-[7px] font-primary text-4xl font-extrabold text-black"
             >
-              <span className="pl-2 text-primary">.</span>
+              <span className="pl-2 text-yellow-200">.</span>
             </ButtonBase>
           </Link>
 
