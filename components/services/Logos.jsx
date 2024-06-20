@@ -12,38 +12,38 @@ const logos = [
   {
     name: "HTML 5",
     icon: <RiHtml5Fill />,
-    hover: "hover:text-[#e34c26]",
+    color: "text-[#e34c26]",
   },
   {
     name: "CSS 3",
     icon: <FaCss3Alt />,
-    hover: "hover:text-[#264de4]",
+    color: "text-[#264de4]",
   },
   {
     name: "Javascript",
     icon: <RiJavascriptFill />,
-    hover: "hover:text-[#f0bd4f]",
+    color: "text-[#f0bd4f]",
   },
   {
     name: "React",
     icon: <RiReactjsFill />,
-    hover: "hover:text-[#61DBFB]",
+    color: "text-[#61DBFB]",
     animate: "animate-[spin_20s_linear_infinite]",
   },
   {
     name: "Next.js",
     icon: <RiNextjsFill />,
-    hover: "hover:text-[#000000]",
+    color: "text-[#000000]",
   },
   {
     name: "Tailwind CSS",
     icon: <RiTailwindCssFill />,
-    hover: "hover:text-[#a5f3fc]",
+    color: "text-[#a5f3fc]",
   },
   {
     name: "MongoDB",
     icon: <SiMongodb />,
-    hover: "hover:text-[#00ED64]",
+    color: "text-[#00ED64]",
   },
 ];
 
@@ -55,7 +55,7 @@ const Logos = () =>
       </p>
 
       <div
-        className={`flex flex-col items-center justify-center gap-2 rounded-lg border border-black p-6 opacity-30 hover:opacity-100 ${logo.hover}`}
+        className={`flex flex-col items-center justify-center gap-2 rounded-lg border border-black p-6 opacity-30 hover:opacity-100 ${logo.color}`}
       >
         <div
           className={`text-8xl ${logo.animate && logo.animate} will-change-contents`}
