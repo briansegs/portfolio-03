@@ -13,13 +13,13 @@ export default function Home() {
       <section className="xl:padding-l wide:padding-r padding-b">
         <Hero />
       </section>
-      <section className="padding">
+      <section className="padding-x py-10">
         <Services />
       </section>
       <section className="padding">
         <About />
       </section>
-      <section className="padding">
+      <section className="padding bg-black">
         <Projects />
       </section>
       <section className="padding">
