@@ -55,7 +55,7 @@ const Logos = () =>
       </p>
 
       <div
-        className={`flex flex-col items-center justify-center gap-2 rounded-lg border border-black p-6 opacity-30 hover:opacity-100 ${logo.color}`}
+        className={`flex flex-col items-center justify-center gap-2 rounded-lg border border-black p-6 opacity-100 hover:opacity-100 sm:opacity-30 ${logo.color}`}
       >
         <div
           className={`text-8xl ${logo.animate && logo.animate} will-change-contents`}
