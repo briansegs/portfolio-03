@@ -30,7 +30,7 @@ const Projects = () => {
           <div className="flex flex-col gap-4">
             <Chip
               chipStyles="bg-slate-300"
-              textStyles="text-black"
+              textStyles="text-black text-lg"
               text="Front-End Web Development"
               icon={<CgLinear />}
             />
