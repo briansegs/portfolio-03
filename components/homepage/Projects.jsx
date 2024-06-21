@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { staggerContainer } from "@/constants/motion";
 import { ExploreCard, TitleText, TypingText } from "../projects";
 import { img01, img02, img03, img04, img05 } from "../../assets/projects";
+import ButtonDark from "../ButtonDark";
+import { CgLinear } from "react-icons/cg";
 
 const data = [
   {
@@ -51,14 +53,26 @@ const Projects = () => {
       >
         {/* ^ remove mx-auto and 2xl:max-w-screen-xl. add max-container to make container match the rest of the site */}
 
-        <TypingText
-          title={"The latest and greatest"}
-          textStyles={
-            "font-primary text-xl font-bold tracking-[-0.4px] mt-4 text-center"
-          }
-        />
+        <div className="flex w-full items-center justify-between gap-4">
+          <div className="flex flex-col gap-4">
+            <div className="flex w-fit items-center gap-2 rounded-md bg-secondary px-[12px] py-[6px]">
+              <CgLinear />
+              <p className=" font-primary text-lg font-bold tracking-[-0.4px] text-black">
+                Front-End Web Development
+              </p>
+            </div>
 
-        <div className="mt-[50px] flex min-h-[70vh] flex-col gap-5 lg:flex-row">
+            <h3 className="text-5xl tracking-[-2px] sm:text-6xl">
+              Stunning designs and User-Friendly Interfaces.
+            </h3>
+          </div>
+
+          <div className="flex h-[116px] flex-col justify-end whitespace-nowrap">
+            <ButtonDark title={"Hire Me"} />
+          </div>
+        </div>
+
+        <div className="mt-8 flex min-h-[70vh] flex-col gap-5 lg:flex-row">
           {data.map((world, index) => (
             <ExploreCard
               key={world.id}
