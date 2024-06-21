@@ -6,8 +6,17 @@ import { fadeIn } from "@/constants/motion";
 
 import { RxGithubLogo } from "react-icons/rx";
 import { LuMonitor } from "react-icons/lu";
+import Chip from "../Chip";
 
-const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
+const ExploreCard = ({
+  id,
+  imgUrl,
+  title,
+  index,
+  active,
+  handleClick,
+  stack,
+}) => (
   <motion.div
     variants={fadeIn("right", "spring", index * 0.5, 0.75)}
     className={`relative ${active === id ? "flex-[10] lg:flex-[3.5]" : "flex-[2] lg:flex-[0.5]"} flex h-[700px] min-w-[170px] items-center justify-center transition-[flex] duration-[0.7s] ease-out`}
@@ -34,10 +43,17 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
           </div>
         </div>
 
-        <p className="font-primary text-lg font-bold tracking-[-0.4px] text-white">
-          Check out the code
-        </p>
-        <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl">
+        <div className="flex flex-wrap gap-2 whitespace-nowrap">
+          {stack.map((tech, index) => (
+            <Chip
+              key={tech + index}
+              chipStyles="bg-secondary"
+              textStyles="text-black"
+              text={tech}
+            />
+          ))}
+        </div>
+        <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
           {title}
         </h2>
       </div>

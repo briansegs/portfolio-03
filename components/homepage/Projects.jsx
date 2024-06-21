@@ -7,9 +7,10 @@ import { ExploreCard } from "../projects";
 import { projects } from "@/constants";
 import ButtonDark from "../ButtonDark";
 import { CgLinear } from "react-icons/cg";
+import Chip from "../Chip";
 
 const Projects = () => {
-  const [active, setActive] = useState("world-2");
+  const [active, setActive] = useState("project-2");
 
   return (
     <section className="flex flex-col items-center justify-center">
@@ -27,12 +28,12 @@ const Projects = () => {
 
         <div className="flex w-full items-center justify-between gap-4">
           <div className="flex flex-col gap-4">
-            <div className="flex w-fit items-center gap-2 rounded-md bg-secondary px-[12px] py-[6px]">
-              <CgLinear />
-              <p className=" font-primary text-lg font-bold tracking-[-0.4px] text-black">
-                Front-End Web Development
-              </p>
-            </div>
+            <Chip
+              chipStyles="bg-slate-300"
+              textStyles="text-black"
+              text="Front-End Web Development"
+              icon={<CgLinear />}
+            />
 
             <h3 className="text-5xl tracking-[-2px] sm:text-6xl">
               Stunning designs and User-Friendly Interfaces.
