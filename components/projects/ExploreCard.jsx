@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/motion";
 
@@ -16,6 +17,8 @@ const ExploreCard = ({
   active,
   handleClick,
   stack,
+  gitUrl,
+  liveUrl,
 }) => (
   <motion.div
     variants={fadeIn("right", "spring", index * 0.5, 0.75)}
@@ -34,13 +37,21 @@ const ExploreCard = ({
     ) : (
       <div className="absolute bottom-0 w-full flex-col justify-start rounded-b-md bg-[rgba(0,0,0,0.5)] p-8">
         <div className="flex gap-4">
-          <div className="mb-[16px] flex size-[60px] cursor-pointer items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm">
+          <Link
+            href={gitUrl}
+            target="_blank"
+            className="mb-[16px] flex size-[60px] cursor-pointer items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm"
+          >
             <RxGithubLogo className="size-2/3 object-contain" />
-          </div>
+          </Link>
 
-          <div className="mb-[16px] flex size-[60px] cursor-pointer items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm">
+          <Link
+            href={liveUrl}
+            target="_blank"
+            className="mb-[16px] flex size-[60px] cursor-pointer items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm"
+          >
             <LuMonitor className="size-2/3 object-contain" />
-          </div>
+          </Link>
         </div>
 
         <div className="flex flex-wrap gap-2 whitespace-nowrap">
