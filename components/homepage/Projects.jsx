@@ -4,37 +4,38 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { staggerContainer } from "@/constants/motion";
 import { ExploreCard, TitleText, TypingText } from "../projects";
+import { img01, img02, img03, img04, img05 } from "../../assets/projects";
 
 const data = [
   {
     id: "world-1",
-    imgUrl: "",
+    imgUrl: img01,
     title: "The Hogwarts",
   },
   {
     id: "world-2",
-    imgUrl: "",
+    imgUrl: img02,
     title: "Narnia",
   },
   {
     id: "world-3",
-    imgUrl: "",
-    title: "Middle-earth",
+    imgUrl: img03,
+    title: "Middle Earth",
   },
   {
     id: "world-4",
-    imgUrl: "",
+    imgUrl: img04,
     title: "Westeros",
   },
   {
     id: "world-5",
-    imgUrl: "",
+    imgUrl: img05,
     title: "Pandora",
   },
 ];
 
 const Projects = () => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState("world-2");
 
   return (
     <section className="flex flex-col items-center justify-center">
@@ -46,12 +47,14 @@ const Projects = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="mx-auto flex w-full flex-col rounded-md bg-white p-6 2xl:max-w-screen-xl"
+        className=" max-container flex w-full flex-col rounded-md bg-white p-6"
       >
+        {/* ^ remove mx-auto and 2xl:max-w-screen-xl. add max-container to make container match the rest of the site */}
+
         <TypingText
           title={"The latest and greatest"}
           textStyles={
-            "font-primary text-lg font-bold tracking-[-0.4px] mt-4 text-center"
+            "font-primary text-xl font-bold tracking-[-0.4px] mt-4 text-center"
           }
         />
 
