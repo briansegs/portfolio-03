@@ -3,38 +3,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { staggerContainer } from "@/constants/motion";
-import { ExploreCard, TitleText, TypingText } from "../projects";
-import { img01, img02, img03, img04, img05 } from "../../assets/projects";
+import { ExploreCard } from "../projects";
+import { projects } from "@/constants";
 import ButtonDark from "../ButtonDark";
 import { CgLinear } from "react-icons/cg";
-
-const data = [
-  {
-    id: "world-1",
-    imgUrl: img01,
-    title: "The Hogwarts",
-  },
-  {
-    id: "world-2",
-    imgUrl: img02,
-    title: "Narnia",
-  },
-  {
-    id: "world-3",
-    imgUrl: img03,
-    title: "Middle Earth",
-  },
-  {
-    id: "world-4",
-    imgUrl: img04,
-    title: "Westeros",
-  },
-  {
-    id: "world-5",
-    imgUrl: img05,
-    title: "Pandora",
-  },
-];
 
 const Projects = () => {
   const [active, setActive] = useState("world-2");
@@ -73,10 +45,10 @@ const Projects = () => {
         </div>
 
         <div className="mt-8 flex min-h-[70vh] flex-col gap-5 lg:flex-row">
-          {data.map((world, index) => (
+          {projects.map((project, index) => (
             <ExploreCard
-              key={world.id}
-              {...world}
+              key={project.id}
+              {...project}
               index={index}
               active={active}
               handleClick={setActive}
