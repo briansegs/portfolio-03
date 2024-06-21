@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/motion";
 
 import { RxGithubLogo } from "react-icons/rx";
+import { LuMonitor } from "react-icons/lu";
 
 const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
   <motion.div
@@ -23,8 +24,14 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
       </h3>
     ) : (
       <div className="absolute bottom-0 w-full flex-col justify-start rounded-b-md bg-[rgba(0,0,0,0.5)] p-8">
-        <div className="mb-[16px] flex size-[60px] items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm">
-          <RxGithubLogo className="size-2/3 object-contain" />
+        <div className="flex gap-4">
+          <div className="mb-[16px] flex size-[60px] cursor-pointer items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm">
+            <RxGithubLogo className="size-2/3 object-contain" />
+          </div>
+
+          <div className="mb-[16px] flex size-[60px] cursor-pointer items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm">
+            <LuMonitor className="size-2/3 object-contain" />
+          </div>
         </div>
 
         <p className="font-primary text-lg font-bold tracking-[-0.4px] text-white">
