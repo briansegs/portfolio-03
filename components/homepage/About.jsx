@@ -2,6 +2,7 @@ import ButtonDark from "../ButtonDark";
 import ButtonBase from "../ButtonBase";
 import Image from "next/image";
 import aboutImg from "../../assets/about/about-img-04.png";
+import SocialLinks from "../SocialLinks";
 
 const About = () => {
   return (
@@ -39,6 +40,9 @@ const About = () => {
           />
 
           <ButtonDark title={"Hire Me"} />
+        </div>
+        <div className="mt-6 flex gap-4">
+          <SocialLinks />
         </div>
       </div>
 

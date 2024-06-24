@@ -1,8 +1,8 @@
 import Link from "next/link";
-import ButtonSocial from "./ButtonSocial";
-import { navLinks, socialLinks } from "@/constants";
+import { navLinks } from "@/constants";
 import ButtonBase from "./ButtonBase";
 import SideMenu from "./nav/SideMenu";
+import SocialLinks from "./SocialLinks";
 
 const Nav = () => {
   return (
@@ -19,11 +19,7 @@ const Nav = () => {
             </ButtonBase>
           </Link>
 
-          {socialLinks.map((social) => (
-            <Link target="_blank" href={social.href} key={social.name}>
-              <ButtonSocial icon={social.icon} />
-            </Link>
-          ))}
+          <SocialLinks />
         </div>
 
         {/* Navigation links */}
