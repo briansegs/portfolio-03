@@ -2,7 +2,7 @@ import Logos from "../services/Logos";
 
 const Services = () => {
   return (
-    <section className="max-container max-sm:mt-12">
+    <section className="max-container max-sm:my-12">
       <div className="mb-10 flex justify-center">
         <h3 className="w-full text-center text-5xl tracking-[-2.5px] sm:w-4/6 sm:text-6xl">
           The modern tools and web technologies I specialize in

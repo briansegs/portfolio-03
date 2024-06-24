@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/motion";
 import { RxGithubLogo } from "react-icons/rx";
@@ -35,14 +34,14 @@ const ExploreCard = ({
         {title}
       </h3>
     ) : (
-      <div className="absolute bottom-0 w-full flex-col justify-start rounded-b-md bg-[rgba(0,0,0,0.5)] p-8">
-        <div className="flex gap-4">
+      <div className="absolute bottom-0 w-full flex-col justify-start rounded-b-md bg-[rgba(0,0,0,0.5)] p-4 sm:p-8">
+        <div className="mb-3 flex gap-4 sm:mb-4">
           <ProjectButton href={gitUrl} icon={<RxGithubLogo />} />
 
           <ProjectButton href={liveUrl} icon={<LuMonitor />} />
         </div>
 
-        <div className="flex flex-wrap gap-2 whitespace-nowrap">
+        <div className="hidden flex-wrap gap-2 whitespace-nowrap sm:flex">
           {stack.map((tech, index) => (
             <Chip
               key={tech + index}
@@ -52,7 +51,7 @@ const ExploreCard = ({
             />
           ))}
         </div>
-        <h2 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
+        <h2 className="text-xl font-bold text-white sm:mt-4 sm:text-3xl">
           {title}
         </h2>
       </div>

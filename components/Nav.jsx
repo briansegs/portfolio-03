@@ -13,7 +13,7 @@ const Nav = () => {
           <Link href={"/"}>
             <ButtonBase
               title={"Brian"}
-              styles=" h-full bg-transparent pl-5 py-[7px] font-primary text-4xl font-extrabold text-black"
+              styles=" h-full bg-transparent lg:pl-5 py-[7px] font-primary text-4xl font-extrabold text-black"
             >
               <span className="pl-2 text-yellow-100">.</span>
             </ButtonBase>
