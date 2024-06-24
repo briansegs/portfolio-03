@@ -14,7 +14,7 @@ const Projects = () => {
 
   return (
     <section className="flex flex-col items-center justify-center">
-      <h3 className="mb-16 w-full text-center text-5xl tracking-[-2px] text-white sm:w-4/6 sm:text-7xl">
+      <h3 className="mb-16 w-full text-center text-5xl tracking-[-2px] text-white sm:w-4/6 sm:text-6xl lg:text-7xl">
         Featured projects
       </h3>
       <motion.div
@@ -33,7 +33,7 @@ const Projects = () => {
               icon={<CgLinear />}
             />
 
-            <h3 className="text-4xl tracking-[-2px] sm:text-6xl">
+            <h3 className="text-4xl tracking-[-2px] sm:text-5xl lg:text-6xl">
               Stunning designs and User-Friendly Interfaces.
             </h3>
           </div>

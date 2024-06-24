@@ -41,7 +41,7 @@ const ExploreCard = ({
           <ProjectButton href={liveUrl} icon={<LuMonitor />} />
         </div>
 
-        <div className="hidden flex-wrap gap-2 whitespace-nowrap sm:flex">
+        <div className="hidden flex-wrap gap-2 whitespace-nowrap lg:flex">
           {stack.map((tech, index) => (
             <Chip
               key={tech + index}

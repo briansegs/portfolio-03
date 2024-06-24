@@ -38,11 +38,11 @@ const Hero = () => {
       </div>
 
       {/* Right text */}
-      <div className="max-xl:padding-x relative flex w-full flex-col items-start justify-center xl:mt-14 xl:w-3/5">
+      <div className="max-xl:padding-x relative flex w-full flex-col items-start justify-center xl:my-14 xl:w-3/5">
         <p className="text-2xl font-medium tracking-[-1px] text-primary">
           Open for work!
         </p>
-        <h1 className="mt-7 font-primary text-6xl font-black tracking-[-4px] sm:text-8xl sm:leading-[100px] sm:tracking-[-6px]">
+        <h1 className="mt-7 font-primary text-6xl font-black tracking-[-4px] sm:text-7xl sm:leading-[80px] sm:tracking-[-5px]">
           Front-End <span className="">Web</span> Developer
         </h1>
         <p className=" mb-8 mt-10 w-4/5 border-t-2 border-black pt-4 text-2xl tracking-[-1px]">
