@@ -13,7 +13,7 @@ const Projects = () => {
   const [active, setActive] = useState("project-2");
 
   return (
-    <section className="flex flex-col items-center justify-center">
+    <section className="max-container flex flex-col items-center justify-center">
       <h3 className="mb-16 w-full text-center text-5xl tracking-[-2px] text-white sm:w-4/6 sm:text-6xl lg:text-7xl">
         Featured projects
       </h3>
@@ -22,7 +22,7 @@ const Projects = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className=" max-container flex w-full flex-col rounded-md bg-white p-6"
+        className="flex w-full flex-col rounded-md bg-white p-6"
       >
         <div className="flex w-full items-start justify-between gap-4 max-sm:mb-2 max-sm:flex-col sm:items-center">
           <div className="flex flex-col gap-4">

@@ -46,9 +46,10 @@ const Hero = () => {
           Front-End <span className="">Web</span> Developer
         </h1>
         <p className=" mb-8 mt-10 w-4/5 border-t-2 border-black pt-4 text-2xl tracking-[-1px]">
-          Hi, My name is <span className="bg-yellow-100">Brian Segers</span>. I
-          merge function, beauty, and smart design to create outstanding
-          products.
+          Hi, My name is <span className="bg-yellow-100">Brian Segers</span>.
+          I&apos;m passionate about creating beautiful and functional websites.
+          If you&apos;re looking for a dedicated front-end engineer, let&apos;s
+          connect and bring your vision to life!
         </p>
 
         <div className="flex items-center gap-4">
