@@ -39,8 +39,8 @@ const Hero = () => {
 
       {/* Right text */}
       <div className="max-xl:padding-x relative flex w-full flex-col items-start justify-center xl:my-14 xl:w-3/5">
-        <p className="text-2xl font-medium tracking-[-1px] text-primary">
-          Open for work!
+        <p className="text-3xl font-medium tracking-[-1px] text-primary">
+          Open to work!
         </p>
         <h1 className="mt-7 font-primary text-6xl font-black tracking-[-4px] sm:text-7xl sm:leading-[80px] sm:tracking-[-5px]">
           Front-End <span className="">Web</span> Developer

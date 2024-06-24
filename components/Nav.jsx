@@ -15,7 +15,7 @@ const Nav = () => {
               title={"Brian"}
               styles=" h-full bg-transparent lg:pl-5 py-[7px] font-primary text-4xl font-extrabold text-black"
             >
-              <span className="pl-2 text-yellow-100">.</span>
+              <span className="pl-2 text-red-300">.</span>
             </ButtonBase>
           </Link>
 
