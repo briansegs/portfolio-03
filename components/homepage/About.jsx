@@ -43,7 +43,11 @@ const About = () => {
       </div>
 
       <div className="flex flex-1 items-center justify-center max-lg:my-8">
-        <Image src={aboutImg} alt="about-image" className="object-contain" />
+        <Image
+          src={aboutImg}
+          alt="about-image"
+          className="rounded-md object-contain"
+        />
       </div>
     </section>
   );
