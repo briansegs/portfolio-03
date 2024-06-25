@@ -54,9 +54,11 @@ const SideMenu = ({ pathName }) => {
   ) : (
     <button
       onClick={handleClick}
-      className={`mt-2 hidden cursor-pointer p-[7px] text-3xl hover:bg-secondary max-lg:block sm:mt-0 ${pathName !== "/" && "rounded-md bg-white p-2 shadow"}`}
+      className={`hidden cursor-pointer rounded-md p-[7px] text-3xl  max-lg:block sm:mt-0 ${pathName !== "/" && " sm:bg-white sm:p-2 sm:shadow"}`}
     >
-      <RxHamburgerMenu />
+      <div className="sm:p-[7px] sm:hover:bg-secondary">
+        <RxHamburgerMenu />
+      </div>
     </button>
   );
 };

@@ -14,7 +14,9 @@ const Nav = () => {
 
   return (
     <header className="padding-x absolute z-10 w-full py-8">
-      <nav className="max-container flex items-start  justify-between sm:items-center">
+      <nav
+        className={`max-container flex justify-between ${pathName === "/" ? "items-start" : "items-center"}`}
+      >
         {/* Logo / Social links */}
         <div
           className={`flex flex-col gap-8 rounded-lg sm:flex-row sm:items-center sm:gap-4 ${pathName !== "/" && "sm:bg-white sm:pr-4 sm:shadow"}`}
