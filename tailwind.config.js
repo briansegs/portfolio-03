@@ -19,6 +19,7 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/bg_01.png')",
+        projects: "url('/bg_04.png')",
       },
       screens: {
         wide: "1440px",
