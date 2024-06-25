@@ -1,6 +1,6 @@
 import "./globals.css";
 
-// Components
+// Section components
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 
