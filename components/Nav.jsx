@@ -1,30 +1,45 @@
+"use client";
+
 import Link from "next/link";
-import { navLinks } from "@/constants";
+import { usePathname } from "next/navigation";
 import ButtonBase from "./ButtonBase";
 import SideMenu from "./nav/SideMenu";
 import SocialLinks from "./SocialLinks";
 
+import { navLinks } from "@/constants";
+
 const Nav = () => {
+  const pathName = usePathname();
+  console.log(pathName);
+
   return (
     <header className="padding-x absolute z-10 w-full py-8">
       <nav className="max-container flex items-start  justify-between sm:items-center">
         {/* Logo / Social links */}
-        <div className="flex flex-col gap-8 rounded-lg bg-transparent px-[7px] sm:flex-row sm:items-center sm:gap-4">
+        <div
+          className={`flex flex-col gap-8 rounded-lg sm:flex-row sm:items-center sm:gap-4 ${pathName !== "/" && "sm:bg-white sm:pr-4 sm:shadow"}`}
+        >
           <Link href={"/"}>
-            <ButtonBase
-              title={"Brian"}
-              styles=" h-full bg-transparent lg:pl-5 py-[7px] font-primary text-4xl font-extrabold text-black"
-            >
-              <span className="pl-2 text-red-300">.</span>
-            </ButtonBase>
+            <div>
+              <h3 className="py-2 pl-5 font-primary text-4xl font-extrabold text-black max-sm:p-0">
+                Brian <span className=" text-red-300">.</span>
+              </h3>
+            </div>
           </Link>
-
-          <SocialLinks />
+          <div
+            className={`${pathName === "/" ? "flex" : "max-sm:hidden sm:flex"} flex-col gap-8 rounded-lg sm:flex-row sm:items-center sm:gap-4`}
+          >
+            <SocialLinks />
+          </div>
         </div>
 
         {/* Navigation links */}
-        <div className="flex flex-1 items-center justify-center max-lg:hidden">
-          <div className="flex max-w-max gap-8 rounded-lg bg-transparent p-[7px]">
+        <div
+          className={`flex ${pathName === "/" ? "flex-1" : "rounded-md bg-white shadow"} items-center justify-center max-lg:hidden`}
+        >
+          <div
+            className={`flex max-w-max rounded-lg ${pathName === "/" ? "gap-8" : "gap-4 px-4 py-2"}`}
+          >
             {navLinks.map((link) => (
               <Link href={link.path} key={link.name}>
                 <ButtonBase
@@ -37,7 +52,7 @@ const Nav = () => {
         </div>
 
         {/* Side burger menu overlay  */}
-        {<SideMenu />}
+        {<SideMenu pathName={pathName} />}
       </nav>
     </header>
   );
