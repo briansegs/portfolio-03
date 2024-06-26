@@ -10,7 +10,6 @@ import { navLinks } from "@/constants";
 
 const Nav = () => {
   const pathName = usePathname();
-  console.log(pathName);
 
   return (
     <header className="padding-x absolute z-10 w-full py-8">

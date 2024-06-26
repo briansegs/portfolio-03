@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { staggerContainer } from "@/constants/motion";
-import { ExploreCard } from "../projects";
+import ExploreCard from "../projects/ExploreCard";
 import { projects } from "@/constants";
 import ButtonDark from "../ButtonDark";
 import { CgLinear } from "react-icons/cg";
