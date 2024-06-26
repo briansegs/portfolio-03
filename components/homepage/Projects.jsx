@@ -43,7 +43,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="mt-8 flex min-h-[70vh] flex-col gap-5 lg:flex-row">
+        <div className="mt-8 flex min-h-[70vh] flex-col gap-5 xl:flex-row">
           {projects.map((project, index) => (
             <ExploreCard
               key={project.id}

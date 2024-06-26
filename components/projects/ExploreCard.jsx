@@ -30,7 +30,7 @@ const ExploreCard = ({
       className="absolute size-full rounded-md object-cover"
     />
     {active !== id ? (
-      <h3 className="absolute z-0 font-primary text-base font-bold tracking-[-0.4px] text-white sm:text-2xl lg:bottom-20 lg:origin-[0,0] lg:-rotate-90">
+      <h3 className="absolute z-0 font-primary text-base font-bold tracking-[-0.4px] text-white sm:text-2xl xl:bottom-20 xl:origin-[0,0] xl:-rotate-90">
         {title}
       </h3>
     ) : (

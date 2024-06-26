@@ -5,7 +5,7 @@ const page = () => {
     <section className="xl:padding-x bg-projects bg-auto bg-top bg-no-repeat">
       <div className="max-container min-h-screen w-full ">
         <div className="padding flex flex-col items-center">
-          <h1 className="py-8 text-6xl tracking-[-2px] text-white">
+          <h1 className="py-8 text-6xl tracking-[-2px] text-white max-sm:mt-8 max-sm:text-5xl max-sm:tracking-[-1px]">
             My Projects
           </h1>
 
