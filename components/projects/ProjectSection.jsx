@@ -29,11 +29,11 @@ const ProjectCard = () => {
 
   return (
     <>
-      <div className="flex gap-4">
+      <div className="flex gap-4 max-sm:flex-col max-sm:items-center">
         {projects.map((p, idx) => (
           <p
             key={p.id}
-            className={`cursor-pointer font-primary text-xl font-bold tracking-[-0.4px] ${p.id === project.id ? "text-white" : "text-white/40"} hover:text-white`}
+            className={` cursor-pointer font-primary text-xl font-bold tracking-[-0.4px] duration-500 ease-out ${p.id === project.id ? "text-white" : "text-white/40"} hover:text-white`}
             onClick={() => {
               setProject(projects[idx]);
               setIndex(idx);
@@ -50,8 +50,8 @@ const ProjectCard = () => {
           onClick={() => handleLeftClick()}
         />
 
-        <div className="flex min-h-[598px] w-3/4 gap-8 rounded-md bg-white p-6 ">
-          <div className="flex w-2/5 flex-col justify-between gap-6">
+        <div className="flex min-h-[598px] w-3/4 flex-col-reverse gap-8 rounded-md bg-white p-6 max-sm:w-full xl:flex-row ">
+          <div className="flex w-full flex-col justify-between gap-6 xl:w-2/5">
             <div className="flex flex-col justify-between gap-6">
               <Chip
                 chipStyles="bg-slate-300"
@@ -63,7 +63,7 @@ const ProjectCard = () => {
                 <p className="text-5xl tracking-[-1px]">{project.title}</p>
               </div>
 
-              <div className="h-[228px]">
+              <div className="min-h-[228px]">
                 <p className="mb-2 font-primary text-lg font-extrabold tracking-[-0.4px]">
                   {project.descriptionTitle}
                 </p>
@@ -103,7 +103,7 @@ const ProjectCard = () => {
             </div>
           </div>
 
-          <div className="w-3/5">
+          <div className="w-full xl:w-3/5">
             <Image
               src={project.imgUrl}
               alt={project.title}
