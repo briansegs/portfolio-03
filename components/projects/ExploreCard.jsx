@@ -36,9 +36,17 @@ const ExploreCard = ({
     ) : (
       <div className="absolute bottom-0 w-full flex-col justify-start rounded-b-md bg-[rgba(0,0,0,0.5)] p-4 sm:p-8">
         <div className="mb-3 flex gap-4 sm:mb-4">
-          <ProjectButton href={gitUrl} icon={<RxGithubLogo />} />
+          <ProjectButton
+            href={gitUrl}
+            icon={<RxGithubLogo />}
+            styles="bg-white/20 backdrop-blur-sm hover:bg-white/30"
+          />
 
-          <ProjectButton href={liveUrl} icon={<LuMonitor />} />
+          <ProjectButton
+            href={liveUrl}
+            icon={<LuMonitor />}
+            styles="bg-white/20 backdrop-blur-sm hover:bg-white/30"
+          />
         </div>
 
         <div className="hidden flex-wrap gap-2 whitespace-nowrap lg:flex">
