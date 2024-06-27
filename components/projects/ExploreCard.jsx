@@ -30,15 +30,23 @@ const ExploreCard = ({
       className="absolute size-full rounded-md object-cover"
     />
     {active !== id ? (
-      <h3 className="absolute z-0 font-primary text-base font-bold tracking-[-0.4px] text-white sm:text-2xl lg:bottom-20 lg:origin-[0,0] lg:-rotate-90">
+      <h3 className="absolute z-0 font-primary text-base font-bold tracking-[-0.4px] text-white sm:text-2xl xl:bottom-20 xl:origin-[0,0] xl:-rotate-90">
         {title}
       </h3>
     ) : (
       <div className="absolute bottom-0 w-full flex-col justify-start rounded-b-md bg-[rgba(0,0,0,0.5)] p-4 sm:p-8">
         <div className="mb-3 flex gap-4 sm:mb-4">
-          <ProjectButton href={gitUrl} icon={<RxGithubLogo />} />
+          <ProjectButton
+            href={gitUrl}
+            icon={<RxGithubLogo />}
+            styles="bg-white/20 backdrop-blur-sm hover:bg-white/30"
+          />
 
-          <ProjectButton href={liveUrl} icon={<LuMonitor />} />
+          <ProjectButton
+            href={liveUrl}
+            icon={<LuMonitor />}
+            styles="bg-white/20 backdrop-blur-sm hover:bg-white/30"
+          />
         </div>
 
         <div className="hidden flex-wrap gap-2 whitespace-nowrap lg:flex">

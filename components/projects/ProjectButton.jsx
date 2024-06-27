@@ -1,8 +1,10 @@
 import Link from "next/link";
 
-const ProjectButton = ({ href, icon }) => (
+const ProjectButton = ({ href, icon, styles }) => (
   <Link href={href} target="_blank">
-    <button className="flex size-10 cursor-pointer items-center justify-center rounded-xl bg-white/20 text-3xl text-white backdrop-blur-sm hover:bg-white/30 sm:size-14 sm:text-[40px]">
+    <button
+      className={`flex size-10 cursor-pointer items-center justify-center rounded-xl text-3xl text-white sm:size-14 sm:text-[40px] ${styles}`}
+    >
       {icon}
     </button>
   </Link>

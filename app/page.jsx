@@ -1,11 +1,4 @@
-import {
-  About,
-  CTA,
-  Hero,
-  Projects,
-  Reviews,
-  Services,
-} from "@/components/homepage";
+import { About, CTA, Hero, Projects, Services } from "@/components/homepage";
 
 export default function Home() {
   return (
@@ -21,9 +14,6 @@ export default function Home() {
       </section>
       <section className="padding bg-black">
         <Projects />
-      </section>
-      <section className="padding">
-        <Reviews />
       </section>
       <section className="padding">
         <CTA />
