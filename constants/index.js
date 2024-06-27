@@ -23,6 +23,7 @@ export const socialLinks = [
 export const projects = [
   {
     id: "project-1",
+    type: "Front-End Web Development",
     imgUrl: img01,
     title: "Dev Overflow",
     descriptionTitle: "Q&A Platform Clone",
@@ -34,6 +35,7 @@ export const projects = [
   },
   {
     id: "project-2",
+    type: "Front-End Web Development",
     imgUrl: img02,
     title: "Narnia",
     descriptionTitle: "",
@@ -44,6 +46,7 @@ export const projects = [
   },
   {
     id: "project-3",
+    type: "Front-End Web Development",
     imgUrl: img03,
     title: "Middle Earth",
     descriptionTitle: "",
@@ -54,6 +57,7 @@ export const projects = [
   },
   {
     id: "project-4",
+    type: "Front-End Web Development",
     imgUrl: img04,
     title: "Westeros",
     descriptionTitle: "",
@@ -64,6 +68,7 @@ export const projects = [
   },
   {
     id: "project-5",
+    type: "Front-End Web Development",
     imgUrl: img05,
     title: "Pandora",
     descriptionTitle: "",
