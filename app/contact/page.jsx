@@ -12,6 +12,27 @@ const page = () => (
           let&apos;s get in touch!
         </h1>
       </div>
+
+      <div className="flex gap-12">
+        <div className="grid w-fit grid-cols-2 grid-rows-2 gap-6">
+          <div className="size-72 border border-black"></div>
+          <div className="size-72 border border-black"></div>
+          <div className="size-72 border border-black"></div>
+          <div className="size-72 border border-black"></div>
+        </div>
+
+        <div>
+          <form id="contact" className="flex flex-col">
+            <div>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+            </div>
+
+            <input type="text" placeholder="Subject" />
+            <input type="textarea" placeholder="Message" />
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 );
