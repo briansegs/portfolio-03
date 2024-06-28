@@ -6,9 +6,9 @@ const ContactForm = () => {
   return (
     <form
       id="contact"
-      className="mx-0 my-auto flex w-2/5 flex-col justify-between p-4"
+      className="flex w-4/5 flex-col justify-between p-4 xl:w-2/5"
     >
-      <div className="flex justify-between gap-6">
+      <div className="flex flex-col justify-between md:flex-row md:gap-6">
         <ContactInput
           type="text"
           placeholder="Name"

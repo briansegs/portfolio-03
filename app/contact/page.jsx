@@ -13,7 +13,7 @@ const page = () => (
         </h1>
       </div>
 
-      <div className="flex items-center justify-center gap-12">
+      <div className="flex flex-col-reverse items-center justify-center gap-16 xl:flex-row xl:gap-12">
         <ArtGrid />
 
         <ContactForm />
