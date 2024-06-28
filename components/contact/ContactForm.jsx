@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Loading from "../Loading";
 import { ContactButton, ContactInput, ContactTextarea } from ".";
 
 const ContactForm = () => {
@@ -12,6 +13,13 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return <Loading />;
 
   return (
     <form
