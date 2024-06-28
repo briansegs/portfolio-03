@@ -1,4 +1,4 @@
-import React from "react";
+import ContactForm from "@/components/contact/ContactForm";
 
 const page = () => (
   <section className="xl:padding-x">
@@ -15,23 +15,13 @@ const page = () => (
 
       <div className="flex gap-12">
         <div className="grid w-fit grid-cols-2 grid-rows-2 gap-6">
-          <div className="size-72 border border-black"></div>
-          <div className="size-72 border border-black"></div>
-          <div className="size-72 border border-black"></div>
-          <div className="size-72 border border-black"></div>
+          <div className="size-72 border border-black">1</div>
+          <div className="size-72 border border-black">2</div>
+          <div className="size-72 border border-black">3</div>
+          <div className="size-72 border border-black">4</div>
         </div>
 
-        <div>
-          <form id="contact" className="flex flex-col">
-            <div>
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
-            </div>
-
-            <input type="text" placeholder="Subject" />
-            <input type="textarea" placeholder="Message" />
-          </form>
-        </div>
+        <ContactForm />
       </div>
     </div>
   </section>
