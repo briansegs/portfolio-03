@@ -3,9 +3,10 @@ const styles =
 
 const inputHeight = "h-[66px]";
 
-const ContactInput = ({ type, placeholder, warning, onchange }) => (
+const ContactInput = ({ type, placeholder, warning, onchange, id }) => (
   <div className={inputHeight}>
     <input
+      id={id}
       className={styles}
       type={type}
       placeholder={placeholder}
