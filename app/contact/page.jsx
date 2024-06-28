@@ -1,5 +1,4 @@
-import ArtGrid from "@/components/contact/ArtGrid";
-import ContactForm from "@/components/contact/ContactForm";
+import { ArtGrid, ContactForm } from "@/components/contact";
 
 const page = () => (
   <section className="xl:padding-x">
@@ -14,7 +13,7 @@ const page = () => (
         </h1>
       </div>
 
-      <div className="flex gap-12">
+      <div className="flex items-center justify-center gap-12">
         <ArtGrid />
 
         <ContactForm />
