@@ -1,3 +1,4 @@
+import ArtGrid from "@/components/contact/ArtGrid";
 import ContactForm from "@/components/contact/ContactForm";
 
 const page = () => (
@@ -14,12 +15,7 @@ const page = () => (
       </div>
 
       <div className="flex gap-12">
-        <div className="grid w-fit grid-cols-2 grid-rows-2 gap-6">
-          <div className="size-72 border border-black">1</div>
-          <div className="size-72 border border-black">2</div>
-          <div className="size-72 border border-black">3</div>
-          <div className="size-72 border border-black">4</div>
-        </div>
+        <ArtGrid />
 
         <ContactForm />
       </div>
