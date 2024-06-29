@@ -33,9 +33,14 @@ module.exports = {
             transform: "translateX(0%)",
           },
         },
+        load: {
+          from: { transform: "rotate(0turn)" },
+          to: { transform: "rotate(1turn)" },
+        },
       },
       animation: {
         slide: "slide 35s linear infinite",
+        loading: "load .75s linear infinite",
       },
     },
   },

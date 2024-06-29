@@ -16,7 +16,7 @@ const initState = { values: initValues };
 const ContactForm = () => {
   const [state, setState] = useState(initState);
 
-  const { values } = state;
+  const { values, isLoading } = state;
 
   const invalidForm =
     !values.name || !values.email || !values.subject || !values.message;
@@ -27,8 +27,13 @@ const ContactForm = () => {
       values: { ...prev.values, [target.id]: target.value },
     }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
   };
 
   const [isClient, setIsClient] = useState(false);
@@ -89,7 +94,7 @@ const ContactForm = () => {
           onChange={handleChange}
         />
 
-        <ContactButton disabled={invalidForm} />
+        <ContactButton disabled={invalidForm} isLoading={isLoading} />
       </fieldset>
     </form>
   );
