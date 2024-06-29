@@ -4,11 +4,25 @@ import { useState, useEffect } from "react";
 import Loading from "../Loading";
 import { ContactButton, ContactInput, ContactTextarea } from ".";
 
+const initValues = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
+
+const initState = { values: initValues };
+
 const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [state, setState] = useState(initState);
+
+  const { values } = state;
+
+  const handleChange = ({ target }) =>
+    setState((prev) => ({
+      ...prev,
+      values: { ...prev.values, [target.name]: target.value },
+    }));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,9 +48,10 @@ const ContactForm = () => {
             id="name"
             type="text"
             placeholder="Name"
+            isValid={values.name}
             warning="Warning text"
-            value={name}
-            onchange={(e) => setName(e.target.value)}
+            value={values.name}
+            onchange={(e) => handleChange(e)}
           />
 
           <label htmlFor="email" hidden></label>
@@ -45,8 +60,8 @@ const ContactForm = () => {
             type="email"
             placeholder="Email"
             warning="Warning text"
-            value={email}
-            onchange={(e) => setEmail(e.target.value)}
+            value={values.email}
+            onchange={(e) => handleChange(e)}
           />
         </div>
 
@@ -56,16 +71,16 @@ const ContactForm = () => {
           type="text"
           placeholder="Subject"
           warning="Warning text"
-          value={subject}
-          onchange={(e) => setSubject(e.target.value)}
+          value={values.subject}
+          onchange={(e) => handleChange(e)}
         />
 
         <label htmlFor="message" hidden></label>
         <ContactTextarea
           id="message"
           warning="Warning text"
-          value={message}
-          onchange={(e) => setMessage(e.target.value)}
+          value={values.message}
+          onchange={(e) => handleChange(e)}
         />
 
         <ContactButton disabled={false} />

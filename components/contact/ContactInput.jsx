@@ -3,16 +3,26 @@ const styles =
 
 const inputHeight = "h-[66px]";
 
-const ContactInput = ({ type, placeholder, warning, onchange, id }) => (
+const ContactInput = ({
+  type,
+  placeholder,
+  warning,
+  onchange,
+  id,
+  isValid,
+}) => (
   <div className={inputHeight}>
     <input
       id={id}
+      required
       className={styles}
       type={type}
       placeholder={placeholder}
       onChange={onchange}
     />
-    <p className="hidden font-primary font-semibold text-primary">{warning}</p>
+    {!isValid && (
+      <p className="font-primary font-semibold text-primary">{warning}</p>
+    )}
   </div>
 );
 

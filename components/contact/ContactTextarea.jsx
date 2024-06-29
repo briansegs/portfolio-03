@@ -5,6 +5,7 @@ const ContactTextarea = ({ warning, onchange, id }) => (
   <div className="h-[351px]">
     <textarea
       id={id}
+      required
       placeholder="Message"
       className={`min-h-80 ${styles}`}
       onChange={onchange}
