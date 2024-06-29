@@ -21,7 +21,7 @@ const ContactForm = () => {
   const handleChange = ({ target }) =>
     setState((prev) => ({
       ...prev,
-      values: { ...prev.values, [target.name]: target.value },
+      values: { ...prev.values, [target.id]: target.value },
     }));
 
   const handleSubmit = (e) => {
@@ -48,10 +48,10 @@ const ContactForm = () => {
             id="name"
             type="text"
             placeholder="Name"
-            isValid={values.name}
             warning="Warning text"
+            isInvalid={!values.name}
             value={values.name}
-            onchange={(e) => handleChange(e)}
+            onChange={handleChange}
           />
 
           <label htmlFor="email" hidden></label>
@@ -60,8 +60,9 @@ const ContactForm = () => {
             type="email"
             placeholder="Email"
             warning="Warning text"
+            isInvalid={!values.email}
             value={values.email}
-            onchange={(e) => handleChange(e)}
+            onChange={handleChange}
           />
         </div>
 
@@ -71,16 +72,18 @@ const ContactForm = () => {
           type="text"
           placeholder="Subject"
           warning="Warning text"
+          isInvalid={!values.subject}
           value={values.subject}
-          onchange={(e) => handleChange(e)}
+          onChange={handleChange}
         />
 
         <label htmlFor="message" hidden></label>
         <ContactTextarea
           id="message"
           warning="Warning text"
+          isInvalid={!values.message}
           value={values.message}
-          onchange={(e) => handleChange(e)}
+          onChange={handleChange}
         />
 
         <ContactButton disabled={false} />
