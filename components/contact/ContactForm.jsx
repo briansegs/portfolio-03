@@ -18,6 +18,9 @@ const ContactForm = () => {
 
   const { values } = state;
 
+  const invalidForm =
+    !values.name || !values.email || !values.subject || !values.message;
+
   const handleChange = ({ target }) =>
     setState((prev) => ({
       ...prev,
@@ -86,7 +89,7 @@ const ContactForm = () => {
           onChange={handleChange}
         />
 
-        <ContactButton disabled={false} />
+        <ContactButton disabled={invalidForm} />
       </fieldset>
     </form>
   );
