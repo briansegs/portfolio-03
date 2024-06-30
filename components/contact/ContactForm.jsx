@@ -15,13 +15,13 @@ const initValues = {
   message: "",
 };
 
-const initState = { values: initValues };
+const initState = { values: initValues, isClient: false };
 
 const ContactForm = () => {
   const [state, setState] = useState(initState);
   const { toast } = useToast();
 
-  const { values, isLoading } = state;
+  const { values, isLoading, visited, isClient } = state;
 
   const invalidForm =
     !values.name || !values.email || !values.subject || !values.message;
@@ -30,6 +30,12 @@ const ContactForm = () => {
     setState((prev) => ({
       ...prev,
       values: { ...prev.values, [target.id]: target.value },
+    }));
+
+  const handleBlur = ({ target }) =>
+    setState((prev) => ({
+      ...prev,
+      visited: { ...prev.visited, [target.id]: true },
     }));
 
   const handleSubmit = async (e) => {
@@ -63,9 +69,11 @@ const ContactForm = () => {
     }
   };
 
-  const [isClient, setIsClient] = useState(false);
   useEffect(() => {
-    setIsClient(true);
+    setState((prev) => ({
+      ...prev,
+      isClient: true,
+    }));
   }, []);
 
   if (!isClient) return <Loading />;
@@ -86,7 +94,9 @@ const ContactForm = () => {
             warning="Warning text"
             isInvalid={!values.name}
             value={values.name}
-            onChange={handleChange}
+            handleChange={handleChange}
+            handleBlur={handleBlur}
+            visited={visited}
           />
 
           <label htmlFor="email" hidden></label>
@@ -97,7 +107,9 @@ const ContactForm = () => {
             warning="Warning text"
             isInvalid={!values.email}
             value={values.email}
-            onChange={handleChange}
+            handleChange={handleChange}
+            handleBlur={handleBlur}
+            visited={visited}
           />
         </div>
 
@@ -109,7 +121,9 @@ const ContactForm = () => {
           warning="Warning text"
           isInvalid={!values.subject}
           value={values.subject}
-          onChange={handleChange}
+          handleChange={handleChange}
+          handleBlur={handleBlur}
+          visited={visited}
         />
 
         <label htmlFor="message" hidden></label>
@@ -118,7 +132,9 @@ const ContactForm = () => {
           warning="Warning text"
           isInvalid={!values.message}
           value={values.message}
-          onChange={handleChange}
+          handleChange={handleChange}
+          handleBlur={handleBlur}
+          visited={visited}
         />
 
         <ContactButton disabled={invalidForm} isLoading={isLoading} />
