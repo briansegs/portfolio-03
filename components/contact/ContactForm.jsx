@@ -6,7 +6,7 @@ import { ContactButton, ContactInput, ContactTextarea } from ".";
 import { sendContactForm } from "@/lib/api";
 
 import { useToast } from "@/components/ui/use-toast";
-import { FaCircleCheck } from "react-icons/fa6";
+import { FaCircleCheck, FaCircleExclamation } from "react-icons/fa6";
 
 const initValues = {
   name: "",
@@ -15,13 +15,14 @@ const initValues = {
   message: "",
 };
 
-const initState = { values: initValues, isClient: false };
+const initState = { values: initValues };
 
 const ContactForm = () => {
   const [state, setState] = useState(initState);
+  const [isClient, setIsClient] = useState(false);
   const { toast } = useToast();
 
-  const { values, isLoading, visited, isClient } = state;
+  const { values, isLoading, visited } = state;
 
   const invalidForm =
     !values.name || !values.email || !values.subject || !values.message;
@@ -66,17 +67,21 @@ const ContactForm = () => {
 
       toast({
         variant: "destructive",
-        title: "Uh oh! Something went wrong.",
-        description: error.message,
+        description: (
+          <div className="inline-flex items-center gap-2 font-primary font-bold  tracking-[-0.4px]">
+            <FaCircleExclamation className="text-3xl" />
+            <div>
+              <p className="text-xl ">Uh oh! Something went wrong.</p>
+              <p className="text-lg capitalize opacity-90 ">{error.message}</p>
+            </div>
+          </div>
+        ),
       });
     }
   };
 
   useEffect(() => {
-    setState((prev) => ({
-      ...prev,
-      isClient: true,
-    }));
+    setIsClient(true);
   }, []);
 
   if (!isClient) return <Loading />;
