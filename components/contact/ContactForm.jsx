@@ -3,6 +3,10 @@
 import { useState, useEffect } from "react";
 import Loading from "../Loading";
 import { ContactButton, ContactInput, ContactTextarea } from ".";
+import { sendContactForm } from "@/lib/api";
+
+import { useToast } from "@/components/ui/use-toast";
+import { FaCircleCheck } from "react-icons/fa6";
 
 const initValues = {
   name: "",
@@ -15,6 +19,7 @@ const initState = { values: initValues };
 
 const ContactForm = () => {
   const [state, setState] = useState(initState);
+  const { toast } = useToast();
 
   const { values, isLoading } = state;
 
@@ -34,6 +39,28 @@ const ContactForm = () => {
       ...prev,
       isLoading: true,
     }));
+
+    try {
+      await sendContactForm(values);
+      setState(initState);
+      toast({
+        description: (
+          <div className="inline-flex items-center gap-2 font-primary text-2xl font-bold capitalize tracking-[-0.4px]">
+            <FaCircleCheck className="text-3xl" /> <p>Message sent.</p>
+          </div>
+        ),
+      });
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+      }));
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: error.message,
+      });
+    }
   };
 
   const [isClient, setIsClient] = useState(false);
