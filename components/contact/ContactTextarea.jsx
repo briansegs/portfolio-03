@@ -1,16 +1,18 @@
-"use client";
-
-import { useState } from "react";
-
 const errorStyles = "outline outline-2 outline-offset-1 outline-primary ";
 
 const styles =
   "w-full rounded-sm border-b-2 border-black px-3 pt-2 text-2xl tracking-[-0.5px] ring-secondary ring-offset-white placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
 
-const ContactTextarea = ({ warning, onChange, id, isInvalid, value }) => {
-  const [visited, setVisited] = useState(false);
-
-  const showError = () => isInvalid && visited;
+const ContactTextarea = ({
+  warning,
+  handleChange,
+  id,
+  isInvalid,
+  value,
+  handleBlur,
+  visited,
+}) => {
+  const showError = () => isInvalid && (visited ? visited[id] : false);
 
   return (
     <div className="h-[355px]">
@@ -19,8 +21,8 @@ const ContactTextarea = ({ warning, onChange, id, isInvalid, value }) => {
         required
         placeholder="Message"
         className={`min-h-80 ${styles} ${showError() && errorStyles}`}
-        onChange={onChange}
-        onBlur={() => setVisited(true)}
+        onChange={handleChange}
+        onBlur={handleBlur}
         value={value}
       />
       {showError() && (

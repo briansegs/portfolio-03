@@ -48,7 +48,9 @@ const ContactForm = () => {
 
     try {
       await sendContactForm(values);
+
       setState(initState);
+
       toast({
         description: (
           <div className="inline-flex items-center gap-2 font-primary text-2xl font-bold capitalize tracking-[-0.4px]">
@@ -61,6 +63,7 @@ const ContactForm = () => {
         ...prev,
         isLoading: false,
       }));
+
       toast({
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
@@ -93,10 +96,10 @@ const ContactForm = () => {
             placeholder="Name"
             warning="Warning text"
             isInvalid={!values.name}
+            visited={visited}
             value={values.name}
             handleChange={handleChange}
             handleBlur={handleBlur}
-            visited={visited}
           />
 
           <label htmlFor="email" hidden></label>
@@ -106,10 +109,10 @@ const ContactForm = () => {
             placeholder="Email"
             warning="Warning text"
             isInvalid={!values.email}
+            visited={visited}
             value={values.email}
             handleChange={handleChange}
             handleBlur={handleBlur}
-            visited={visited}
           />
         </div>
 
@@ -120,10 +123,10 @@ const ContactForm = () => {
           placeholder="Subject"
           warning="Warning text"
           isInvalid={!values.subject}
+          visited={visited}
           value={values.subject}
           handleChange={handleChange}
           handleBlur={handleBlur}
-          visited={visited}
         />
 
         <label htmlFor="message" hidden></label>
@@ -131,10 +134,10 @@ const ContactForm = () => {
           id="message"
           warning="Warning text"
           isInvalid={!values.message}
+          visited={visited}
           value={values.message}
           handleChange={handleChange}
           handleBlur={handleBlur}
-          visited={visited}
         />
 
         <ContactButton disabled={invalidForm} isLoading={isLoading} />

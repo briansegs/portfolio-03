@@ -1,7 +1,3 @@
-"use client";
-
-import { useState } from "react";
-
 const errorStyles = "outline outline-2 outline-offset-1 outline-primary ";
 
 const styles =
@@ -13,14 +9,14 @@ const ContactInput = ({
   type,
   placeholder,
   warning,
-  onChange,
+  handleChange,
   id,
   isInvalid,
   value,
+  handleBlur,
+  visited,
 }) => {
-  const [visited, setVisited] = useState(false);
-
-  const showError = () => isInvalid && visited;
+  const showError = () => isInvalid && (visited ? visited[id] : false);
 
   return (
     <div className={inputHeight}>
@@ -30,9 +26,9 @@ const ContactInput = ({
         className={`${styles} ${showError() && errorStyles}`}
         type={type}
         placeholder={placeholder}
-        onChange={onChange}
+        onChange={handleChange}
         value={value}
-        onBlur={() => setVisited(true)}
+        onBlur={handleBlur}
       />
       {showError() && (
         <p className="font-primary font-semibold text-primary">{warning}</p>
