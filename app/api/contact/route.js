@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { transporter, mailOptions } from "@/constants/nodemailer";
-import Html from "@/components/contact/Html";
+import { Html, isInvalidValue } from "@/components/contact";
 
 const CONTACT_MESSAGE_FIELDS = {
   name: "Name",
@@ -33,8 +33,17 @@ const generateEmailContent = (data) => {
 export async function POST(request) {
   if (request.method === "POST") {
     const data = await request.json();
-    if (!data.name || !data.email || !data.subject || !data.message) {
-      return NextResponse.json({ message: "Bad Request" }, { status: 400 });
+
+    const { name, email, subject, message } = isInvalidValue(data);
+
+    const isInvalidForm =
+      name.isInvalid ||
+      email.isInvalid ||
+      subject.isInvalid ||
+      message.isInvalid;
+
+    if (isInvalidForm) {
+      return NextResponse.json({ message: "Form is invalid" }, { status: 400 });
     }
 
     try {

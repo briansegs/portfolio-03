@@ -2,7 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Loading from "../Loading";
-import { ContactButton, ContactInput, ContactTextarea } from ".";
+import {
+  ContactButton,
+  ContactInput,
+  ContactTextarea,
+  isInvalidValue,
+} from ".";
 import { sendContactForm } from "@/lib/api";
 
 import { useToast } from "@/components/ui/use-toast";
@@ -24,8 +29,10 @@ const ContactForm = () => {
 
   const { values, isLoading, visited } = state;
 
-  const invalidForm =
-    !values.name || !values.email || !values.subject || !values.message;
+  const { name, email, subject, message } = isInvalidValue(values);
+
+  const isInvalidForm =
+    name.isInvalid || email.isInvalid || subject.isInvalid || message.isInvalid;
 
   const handleChange = ({ target }) =>
     setState((prev) => ({
@@ -60,6 +67,8 @@ const ContactForm = () => {
         ),
       });
     } catch (error) {
+      console.log(error.message);
+
       setState((prev) => ({
         ...prev,
         isLoading: false,
@@ -99,8 +108,8 @@ const ContactForm = () => {
             id="name"
             type="text"
             placeholder="Name"
-            warning="Warning text"
-            isInvalid={!values.name}
+            warning={name.errorMessage}
+            isInvalid={name.isInvalid}
             visited={visited}
             value={values.name}
             handleChange={handleChange}
@@ -112,8 +121,8 @@ const ContactForm = () => {
             id="email"
             type="email"
             placeholder="Email"
-            warning="Warning text"
-            isInvalid={!values.email}
+            warning={email.errorMessage}
+            isInvalid={email.isInvalid}
             visited={visited}
             value={values.email}
             handleChange={handleChange}
@@ -126,8 +135,8 @@ const ContactForm = () => {
           id="subject"
           type="text"
           placeholder="Subject"
-          warning="Warning text"
-          isInvalid={!values.subject}
+          warning={subject.errorMessage}
+          isInvalid={subject.isInvalid}
           visited={visited}
           value={values.subject}
           handleChange={handleChange}
@@ -137,15 +146,18 @@ const ContactForm = () => {
         <label htmlFor="message" hidden></label>
         <ContactTextarea
           id="message"
-          warning="Warning text"
-          isInvalid={!values.message}
+          warning={message.errorMessage}
+          isInvalid={message.isInvalid}
           visited={visited}
           value={values.message}
           handleChange={handleChange}
           handleBlur={handleBlur}
         />
 
-        <ContactButton disabled={invalidForm} isLoading={isLoading} />
+        <ContactButton
+          disabled={isInvalidForm || isLoading}
+          isLoading={isLoading}
+        />
       </fieldset>
     </form>
   );
