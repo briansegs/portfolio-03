@@ -1,17 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Loading from "../Loading";
+import { useToast } from "@/components/ui/use-toast";
 import {
   ContactButton,
   ContactInput,
   ContactTextarea,
   isInvalidValue,
+  ToastSuccess,
+  ToastFail,
 } from ".";
 import { sendContactForm } from "@/lib/api";
-
-import { useToast } from "@/components/ui/use-toast";
-import { FaCircleCheck, FaCircleExclamation } from "react-icons/fa6";
+import Loading from "../Loading";
 
 const initValues = {
   name: "",
@@ -60,11 +60,7 @@ const ContactForm = () => {
       setState(initState);
 
       toast({
-        description: (
-          <div className="inline-flex items-center gap-2 font-primary text-2xl font-bold capitalize tracking-[-0.4px]">
-            <FaCircleCheck className="text-3xl" /> <p>Message sent.</p>
-          </div>
-        ),
+        description: <ToastSuccess />,
       });
     } catch (error) {
       console.log(error.message);
@@ -76,15 +72,7 @@ const ContactForm = () => {
 
       toast({
         variant: "destructive",
-        description: (
-          <div className="inline-flex items-center gap-2 font-primary font-bold  tracking-[-0.4px]">
-            <FaCircleExclamation className="text-3xl" />
-            <div>
-              <p className="text-xl ">Uh oh! Something went wrong.</p>
-              <p className="text-lg capitalize opacity-90 ">{error.message}</p>
-            </div>
-          </div>
-        ),
+        description: <ToastFail error={error} />,
       });
     }
   };
