@@ -11,7 +11,7 @@ import {
   ToastFail,
 } from ".";
 import { sendContactForm } from "@/lib/api";
-import Loading from "../Loading";
+import Loading from "@/components/Loading";
 
 const initValues = {
   name: "",

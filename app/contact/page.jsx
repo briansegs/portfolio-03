@@ -1,4 +1,5 @@
-import { ArtGrid, ContactForm } from "@/components/contact";
+import { ContactForm } from "@/components/contact/contactForm";
+import { ArtGrid } from "@/components/contact/artGrid";
 
 const page = () => (
   <section className="xl:padding-x">

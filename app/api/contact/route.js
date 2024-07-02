@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { transporter, mailOptions } from "@/constants/nodemailer";
-import { Html, isInvalidValue } from "@/components/contact";
+import { Html, isInvalidValue } from "@/components/contact/contactForm";
 
 const CONTACT_MESSAGE_FIELDS = {
   name: "Name",

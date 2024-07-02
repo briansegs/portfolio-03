@@ -1,4 +1,3 @@
-import ArtGrid from "./ArtGrid";
 import ContactForm from "./ContactForm";
 import ContactInput from "./ContactInput";
 import ContactTextarea from "./ContactTextarea";
@@ -9,7 +8,6 @@ import ToastSuccess from "./ToastSuccess";
 import ToastFail from "./ToastFail";
 
 export {
-  ArtGrid,
   ContactForm,
   ContactInput,
   ContactTextarea,
