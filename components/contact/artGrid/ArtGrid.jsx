@@ -8,10 +8,10 @@ const ArtGrid = () => (
     <div className="size-72 border border-black">
       <Grid2 />
     </div>
-    <div className="size-72 border border-black">
+    <div className="size-72 border border-black transition duration-200 hover:-translate-y-1 hover:translate-x-1 hover:bg-black hover:drop-shadow-[-5px_5px_0_rgba(0,0,0,1)]">
       <Grid3 />
     </div>
-    <div className="size-72 border border-black">
+    <div className="relative size-72">
       <Grid4 />
     </div>
   </div>
