@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import particlesOptions from "../../constants/particles_config_01.json";
@@ -63,7 +64,9 @@ const Hero = () => {
             styles="border-2 border-black bg-white px-[12px] py-[4px] text-lg font-bold tracking-[-0.4px] text-black hover:bg-black hover:text-white"
           />
 
-          <ButtonDark title={"Hire Me"} />
+          <Link href={"/contact"}>
+            <ButtonDark title={"Hire Me"} />
+          </Link>
         </div>
       </div>
     </section>

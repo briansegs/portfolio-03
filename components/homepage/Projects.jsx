@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { staggerContainer } from "@/constants/motion";
 import ExploreCard from "../projects/ExploreCard";
@@ -39,7 +40,9 @@ const Projects = () => {
           </div>
 
           <div className="flex h-full flex-col justify-end whitespace-nowrap sm:h-[116px]">
-            <ButtonDark title={"Hire Me"} />
+            <Link href={"/projects"}>
+              <ButtonDark title={"Projects"} />
+            </Link>
           </div>
         </div>
 
