@@ -28,7 +28,12 @@ const Hero = () => {
     <section className="max-container flex min-h-screen w-full flex-col justify-center gap-10 xl:flex-row">
       {/* Left image */}
       <div className="relative flex min-h-screen w-full bg-hero bg-center bg-no-repeat">
-        {init && <Particles className="h-screen" options={particlesOptions} />}
+        {init && (
+          <Particles
+            className="left-0 top-0 z-0 m-0 h-screen w-full p-0"
+            options={particlesOptions}
+          />
+        )}
 
         <Image
           src={avatar}
