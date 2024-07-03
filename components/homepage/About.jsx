@@ -2,7 +2,7 @@ import ButtonDark from "../ButtonDark";
 import ButtonBase from "../ButtonBase";
 import Image from "next/image";
 import Link from "next/link";
-import aboutImg from "../../assets/about/about-img-04.png";
+import aboutImg from "../../assets/about/about_img.png";
 import SocialLinks from "../SocialLinks";
 
 const About = () => {
@@ -49,12 +49,16 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex flex-1 items-center justify-center max-xl:my-8">
-        <Image
-          src={aboutImg}
-          alt="about-image"
-          className="rounded-md object-contain"
-        />
+      <div className="flex h-[930px] w-full flex-1 items-center justify-center bg-about bg-auto bg-no-repeat max-xl:my-8">
+        <div className="rounded-md bg-white/70 p-4">
+          <Image
+            src={aboutImg}
+            alt="about-image"
+            width={600}
+            height={600}
+            className="object-contain"
+          />
+        </div>
       </div>
     </section>
   );
