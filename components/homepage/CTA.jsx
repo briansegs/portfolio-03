@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ButtonDark from "../ButtonDark";
 
 const CTA = () => (
@@ -15,7 +16,9 @@ const CTA = () => (
       </dir>
 
       <div className="whitespace-nowrap">
-        <ButtonDark title="Hire Me" />
+        <Link href={"/contact"}>
+          <ButtonDark title={"Hire Me"} />
+        </Link>
       </div>
     </div>
   </section>

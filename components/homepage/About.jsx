@@ -1,6 +1,7 @@
 import ButtonDark from "../ButtonDark";
 import ButtonBase from "../ButtonBase";
 import Image from "next/image";
+import Link from "next/link";
 import aboutImg from "../../assets/about/about-img-04.png";
 import SocialLinks from "../SocialLinks";
 
@@ -39,7 +40,9 @@ const About = () => {
             styles="border-2 border-black bg-white px-[12px] py-[4px] text-lg font-bold tracking-[-0.4px] text-black hover:bg-black hover:text-white"
           />
 
-          <ButtonDark title={"Hire Me"} />
+          <Link href={"/contact"}>
+            <ButtonDark title={"Hire Me"} />
+          </Link>
         </div>
         <div className="mt-6 flex gap-4">
           <SocialLinks />
