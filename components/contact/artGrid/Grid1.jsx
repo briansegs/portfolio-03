@@ -20,7 +20,7 @@ const Grid1 = () => {
     });
   }, []);
   return (
-    <div className="size-full bg-grid1 bg-contain bg-no-repeat">
+    <div className="size-full border border-black bg-grid1 bg-contain bg-no-repeat">
       {init && (
         <Particles
           className="left-0 top-0 z-0 m-0 size-full p-0"
