@@ -20,7 +20,7 @@ module.exports = {
       backgroundImage: {
         hero: "url('/bg_01.png')",
         about: "url('/about_bg.png')",
-        projects: "url('/bg_05.png')",
+        projects: "url('/bg_06.png')",
         grid1: "url('/frame_01.png')",
         grid3: "url('/frame_03.png')",
       },
