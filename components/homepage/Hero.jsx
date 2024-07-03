@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
-import particlesOptions from "../../constants/particles_config.json";
+import particlesOptions from "../../constants/particles_config_01.json";
 import ButtonDark from "../ButtonDark";
 import avatar from "../../assets/hero/avatar_03.png";
 import ButtonBase from "../ButtonBase";
@@ -28,7 +28,7 @@ const Hero = () => {
     <section className="max-container flex min-h-screen w-full flex-col justify-center gap-10 xl:flex-row">
       {/* Left image */}
       <div className="relative flex min-h-screen w-full bg-hero bg-center bg-no-repeat">
-        {init && <Particles options={particlesOptions} />}
+        {init && <Particles className="h-screen" options={particlesOptions} />}
 
         <Image
           src={avatar}
