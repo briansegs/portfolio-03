@@ -27,6 +27,24 @@
     max-width: 1440px;
     margin: 0 auto;
   }
+
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  }
+
+  .card-3d:hover {
+    transform: rotateY(180deg);
+  }
+
+  .card-3d-front {
+    backface-visibility: hidden;
+  }
+
+  .card-3d-back {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
 }
 
 @layer utilities {
