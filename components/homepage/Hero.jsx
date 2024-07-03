@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
-import particlesOptions from "../../constants/particles_config.json";
+import particlesOptions from "../../constants/particles_config_01.json";
 import ButtonDark from "../ButtonDark";
 import avatar from "../../assets/hero/avatar_03.png";
 import ButtonBase from "../ButtonBase";
@@ -28,7 +28,12 @@ const Hero = () => {
     <section className="max-container flex min-h-screen w-full flex-col justify-center gap-10 xl:flex-row">
       {/* Left image */}
       <div className="relative flex min-h-screen w-full bg-hero bg-center bg-no-repeat">
-        {init && <Particles options={particlesOptions} />}
+        {init && (
+          <Particles
+            className="left-0 top-0 z-0 m-0 h-screen w-full p-0"
+            options={particlesOptions}
+          />
+        )}
 
         <Image
           src={avatar}
@@ -43,7 +48,7 @@ const Hero = () => {
           Open to work!
         </p>
         <h1 className="mt-7 font-primary text-6xl font-black tracking-[-4px] sm:text-7xl sm:leading-[80px] sm:tracking-[-5px]">
-          Front-End <span className="">Web</span> Developer
+          Front-End Web Developer
         </h1>
         <p className=" mb-8 mt-10 w-4/5 border-t-2 border-black pt-4 text-2xl tracking-[-1px]">
           Hi, My name is <span className="bg-yellow-100">Brian Segers</span>.
