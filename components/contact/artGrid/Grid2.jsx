@@ -1,5 +1,5 @@
 const Grid2 = () => (
-  <div className="size-full border border-black bg-[#b84242]">
+  <div className="grid-frame bg-[#b84242]">
     <div className="flex size-full flex-col justify-between p-4 opacity-0 duration-500 hover:opacity-100">
       <p className="text-2xl tracking-[-1px]">
         Looking forward to hearing from you! Send me a message, and I&apos;ll be
