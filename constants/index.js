@@ -37,7 +37,7 @@ export const projects = [
     id: "project-2",
     type: "Front-End Web Development",
     imgUrl: img02,
-    title: "Narnia",
+    title: "Portfolio",
     descriptionTitle: "",
     description: "",
     gitUrl: "https://github.com/briansegs/nike/",

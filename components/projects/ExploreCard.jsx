@@ -34,7 +34,7 @@ const ExploreCard = ({
         {title}
       </h3>
     ) : (
-      <div className="absolute bottom-0 w-full flex-col justify-start rounded-b-md bg-[rgba(0,0,0,0.5)] p-4 sm:p-8">
+      <div className="absolute bottom-0 w-full flex-col justify-start rounded-b-md bg-[rgba(0,0,0,0.9)] p-4 sm:p-8">
         <div className="mb-3 flex gap-4 sm:mb-4">
           <ProjectButton
             href={gitUrl}
