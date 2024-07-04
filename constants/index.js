@@ -70,11 +70,11 @@ export const projects = [
     id: "project-5",
     type: "Front-End Web Development",
     imgUrl: img05,
-    title: "Pandora",
+    title: "GPT-3",
     descriptionTitle: "",
     description: "",
     gitUrl: "https://github.com/briansegs/gpt-3/",
     liveUrl: "https://briansegs.github.io/gpt-3/",
-    stack: ["HTML 5", "CSS 3"],
+    stack: ["React", "CSS 3"],
   },
 ];
