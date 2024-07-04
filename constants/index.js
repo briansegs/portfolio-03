@@ -59,7 +59,7 @@ export const projects = [
     id: "project-4",
     type: "Front-End Web Development",
     imgUrl: img04,
-    title: "Westeros",
+    title: "Gericht Restaurant",
     descriptionTitle: "",
     description: "",
     gitUrl: "https://github.com/briansegs/gericht-restaurant/",
