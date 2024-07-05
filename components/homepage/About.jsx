@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import aboutImg from "../../assets/about/about_img.png";
 import SocialLinks from "../SocialLinks";
+import DownloadCVBtn from "../DownloadCVBtn";
 
 const About = () => {
   return (
@@ -35,10 +36,9 @@ const About = () => {
         </p>
 
         <div className="flex items-center gap-4">
-          <ButtonBase
-            title={"Download CV"}
-            styles="border-2 border-black bg-white px-[12px] py-[4px] text-lg font-bold tracking-[-0.4px] text-black hover:bg-black hover:text-white"
-          />
+          <Link href={"/Brian Segers Resume.pdf"} target="_blank" download>
+            <DownloadCVBtn />
+          </Link>
 
           <Link href={"/contact"}>
             <ButtonDark title={"Hire Me"} />
