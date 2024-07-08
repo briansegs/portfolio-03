@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import ButtonBase from "./ButtonBase";
 import SideMenu from "./nav/SideMenu";
 import SocialLinks from "./SocialLinks";
@@ -9,38 +6,28 @@ import SocialLinks from "./SocialLinks";
 import { navLinks } from "@/constants";
 
 const Nav = () => {
-  const pathName = usePathname();
-
   return (
     <header className="padding-x absolute z-10 w-full py-8">
-      <nav
-        className={`max-container flex justify-between ${pathName === "/" ? "items-start" : "items-center"}`}
-      >
+      <nav className="max-container flex items-center justify-between">
         {/* Logo / Social links */}
         <div
-          className={`flex flex-col gap-8 rounded-lg sm:flex-row sm:items-center sm:gap-4 ${pathName !== "/" && "sm:bg-white sm:pr-4 sm:shadow"}`}
+          className={`flex items-center gap-4 rounded-lg bg-white px-4 py-2 shadow`}
         >
           <Link href={"/"}>
             <div>
-              <h3 className="py-2 pl-5 font-primary text-4xl font-extrabold text-black max-sm:p-0">
+              <h3 className="font-primary text-4xl font-extrabold text-black">
                 Brian <span className=" text-red-300">.</span>
               </h3>
             </div>
           </Link>
-          <div
-            className={`${pathName === "/" ? "flex" : "max-sm:hidden sm:flex"} flex-col gap-8 rounded-lg sm:flex-row sm:items-center sm:gap-4`}
-          >
+          <div className="hidden items-center gap-4 sm:flex">
             <SocialLinks />
           </div>
         </div>
 
         {/* Navigation links */}
-        <div
-          className={`flex ${pathName === "/" ? "flex-1" : "rounded-md bg-white shadow"} items-center justify-center max-lg:hidden`}
-        >
-          <div
-            className={`flex max-w-max rounded-lg ${pathName === "/" ? "gap-8" : "gap-4 px-4 py-2"}`}
-          >
+        <div className="hidden items-center justify-center gap-4 rounded-md bg-white px-4 py-2 shadow lg:flex">
+          <div className="flex gap-6 rounded-lg">
             {navLinks.map((link) => (
               <Link href={link.path} key={link.name}>
                 <ButtonBase
@@ -53,7 +40,7 @@ const Nav = () => {
         </div>
 
         {/* Side burger menu overlay  */}
-        {<SideMenu pathName={pathName} />}
+        {<SideMenu />}
       </nav>
     </header>
   );

@@ -7,7 +7,7 @@ import { navLinks, socialLinks } from "@/constants";
 import ButtonBase from "../ButtonBase";
 import ButtonSocial from "../ButtonSocial";
 
-const SideMenu = ({ pathName }) => {
+const SideMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const handleClick = () => {
@@ -54,9 +54,9 @@ const SideMenu = ({ pathName }) => {
   ) : (
     <button
       onClick={handleClick}
-      className={`hidden cursor-pointer rounded-md p-[7px] text-3xl  max-lg:block sm:mt-0 ${pathName !== "/" && " sm:bg-white sm:p-2 sm:shadow"}`}
+      className="flex size-14 cursor-pointer items-center justify-center rounded-lg bg-white shadow sm:hidden"
     >
-      <div className="rounded-md sm:p-[7px] sm:hover:bg-secondary">
+      <div className="flex size-10 items-center justify-center rounded-md text-3xl hover:bg-secondary">
         <RxHamburgerMenu />
       </div>
     </button>
