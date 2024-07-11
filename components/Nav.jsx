@@ -7,8 +7,8 @@ import { navLinks } from "@/constants";
 
 const Nav = () => {
   return (
-    <header className="padding-x absolute z-10 w-full py-8">
-      <nav className="max-container flex items-center justify-between">
+    <header className="absolute z-10 w-full px-4 py-8 sm:px-8">
+      <nav className="flex items-center justify-between">
         {/* Logo / Social links */}
         <div
           className={`flex items-center gap-4 rounded-lg bg-white px-4 py-2 shadow`}
