@@ -44,6 +44,12 @@ export const aboutData = {
     ", I wove together data and pixels, translating designs into interactive web interfaces.",
 };
 
+export const projectsData = {
+  headingText: "Featured projects",
+  chipText: "Front-End Web Development",
+  cardHeading: "Stunning designs and User-Friendly Interfaces.",
+};
+
 export const projects = [
   {
     id: "project-1",
