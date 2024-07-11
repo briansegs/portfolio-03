@@ -20,6 +20,12 @@ export const socialLinks = [
   },
 ];
 
+export const heroData = {
+  headingText: "Front-End Web Developer",
+  headingSubtext:
+    "Hi, my name is Brian Segers I'm passionate about creating beautiful and functional websites. If you're looking for a dedicated front-end engineer, let's connect and bring your vision to life!",
+};
+
 export const projects = [
   {
     id: "project-1",
