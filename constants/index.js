@@ -26,6 +26,10 @@ export const heroData = {
     "Hi, my name is Brian Segers I'm passionate about creating beautiful and functional websites. If you're looking for a dedicated front-end engineer, let's connect and bring your vision to life!",
 };
 
+export const servicesData = {
+  headingText: "The modern tools and web technologies I specialize in",
+};
+
 export const projects = [
   {
     id: "project-1",
