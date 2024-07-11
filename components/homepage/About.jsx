@@ -1,5 +1,4 @@
 import ButtonDark from "../ButtonDark";
-import ButtonBase from "../ButtonBase";
 import Image from "next/image";
 import Link from "next/link";
 import aboutImg from "../../assets/about/about_img.png";
@@ -37,7 +36,7 @@ const About = () => {
 
         <div className="flex items-center gap-4">
           <Link href={"/Brian Segers Resume.pdf"} target="_blank" download>
-            <DownloadCVBtn />
+            <DownloadCVBtn dark={true} />
           </Link>
 
           <Link href={"/contact"}>
@@ -49,8 +48,8 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex h-[930px] w-full flex-1 items-center justify-center bg-about bg-auto bg-no-repeat max-xl:my-8">
-        <div className="rounded-md bg-white/70 p-4">
+      <div className="flex h-[930px] w-full flex-1 items-center justify-center rounded-md bg-about bg-auto bg-no-repeat max-xl:my-8">
+        <div className="mx-2 my-8 rounded-md bg-white/70 p-4">
           <Image
             src={aboutImg}
             alt="about-image"
