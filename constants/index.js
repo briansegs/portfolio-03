@@ -50,6 +50,12 @@ export const projectsData = {
   cardHeading: "Stunning designs and User-Friendly Interfaces.",
 };
 
+export const ctaData = {
+  headingText: "Your partner in web development.",
+  subtext:
+    "I'm here to help you design and develop websites that engage and convert. Contact me to explore how we can work together on your next big project.",
+};
+
 export const projects = [
   {
     id: "project-1",
