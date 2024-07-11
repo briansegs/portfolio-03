@@ -54,7 +54,7 @@ const SideMenu = () => {
   ) : (
     <button
       onClick={handleClick}
-      className="flex size-14 cursor-pointer items-center justify-center rounded-lg bg-white shadow sm:hidden"
+      className="flex size-14 cursor-pointer items-center justify-center rounded-lg bg-white shadow lg:hidden"
     >
       <div className="flex size-10 items-center justify-center rounded-md text-3xl hover:bg-secondary">
         <RxHamburgerMenu />
