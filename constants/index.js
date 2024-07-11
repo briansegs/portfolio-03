@@ -30,6 +30,20 @@ export const servicesData = {
   headingText: "The modern tools and web technologies I specialize in",
 };
 
+export const aboutData = {
+  headingText: "About me",
+  paragraph1Part1:
+    "Hey there! I'm passionate about crafting digital experiences that come alive on the web. As",
+  paragraph1Part1Highlight: "a seasoned 3D Artist turned Software Engineer",
+  paragraph1Part2:
+    ", I've danced between pixels and code, blending creativity with logic. My journey began in the captivating world of visual art, where I sculpted virtual landscapes and breathed life into characters. However, the allure of the digital canvas led me to pivot toward the dynamic realm of web development.",
+  paragraph2Part1: "In",
+  paragraph2Part1Highlight:
+    "my most recent role as a Front-end Web Developer on Udacity's Student Experience team",
+  paragraph2Part2:
+    ", I wove together data and pixels, translating designs into interactive web interfaces.",
+};
+
 export const projects = [
   {
     id: "project-1",

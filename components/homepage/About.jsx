@@ -4,34 +4,34 @@ import Link from "next/link";
 import aboutImg from "../../assets/about/about_img.png";
 import SocialLinks from "../SocialLinks";
 import DownloadCVBtn from "../DownloadCVBtn";
+import { aboutData } from "@/constants";
+
+const {
+  headingText,
+  paragraph1Part1,
+  paragraph1Part1Highlight,
+  paragraph1Part2,
+  paragraph2Part1,
+  paragraph2Part1Highlight,
+  paragraph2Part2,
+} = aboutData;
 
 const About = () => {
   return (
     <section className="max-container flex w-full items-center justify-between gap-10 max-xl:flex-col">
       <div className="flex flex-1 flex-col">
         <h2 className="font-primary text-4xl font-black tracking-[-2px] sm:text-6xl sm:tracking-[-3px] xl:max-w-lg">
-          About me
+          {headingText}
         </h2>
         <p className=" mb-4 mt-6 border-t-2 border-black pt-4 text-3xl tracking-[-1px] xl:max-w-lg">
-          Hey there! I&#39;m passionate about crafting digital experiences that
-          come alive on the web. As{" "}
-          <span className="bg-yellow-100">
-            a seasoned 3D Artist turned Software Engineer
-          </span>
-          , I&#39;ve danced between pixels and code, blending creativity with
-          logic. My journey began in the captivating world of visual art, where
-          I sculpted virtual landscapes and breathed life into characters.
-          However, the allure of the digital canvas led me to pivot toward the
-          dynamic realm of web development.
+          {paragraph1Part1}{" "}
+          <span className="bg-yellow-100">{paragraph1Part1Highlight}</span>
+          {paragraph1Part2}
         </p>
         <p className="mb-10 text-3xl tracking-[-1px] xl:max-w-lg">
-          In{" "}
-          <span className="bg-yellow-100">
-            my most recent role as a Front-end Web Developer on Udacity&#39;s
-            Student Experience team
-          </span>
-          , I wove together data and pixels, translating designs into
-          interactive web interfaces.
+          {paragraph2Part1}{" "}
+          <span className="bg-yellow-100">{paragraph2Part1Highlight}</span>
+          {paragraph2Part2}
         </p>
 
         <div className="flex items-center gap-4">
