@@ -20,6 +20,42 @@ export const socialLinks = [
   },
 ];
 
+export const heroData = {
+  headingText: "Front-End Web Developer",
+  headingSubtext:
+    "Hi, my name is Brian Segers I'm passionate about creating beautiful and functional websites. If you're looking for a dedicated front-end engineer, let's connect and bring your vision to life!",
+};
+
+export const servicesData = {
+  headingText: "The modern tools and web technologies I specialize in",
+};
+
+export const aboutData = {
+  headingText: "About me",
+  paragraph1Part1:
+    "Hey there! I'm passionate about crafting digital experiences that come alive on the web. As",
+  paragraph1Part1Highlight: "a seasoned 3D Artist turned Software Engineer",
+  paragraph1Part2:
+    ", I've danced between pixels and code, blending creativity with logic. My journey began in the captivating world of visual art, where I sculpted virtual landscapes and breathed life into characters. However, the allure of the digital canvas led me to pivot toward the dynamic realm of web development.",
+  paragraph2Part1: "In",
+  paragraph2Part1Highlight:
+    "my most recent role as a Front-end Web Developer on Udacity's Student Experience team",
+  paragraph2Part2:
+    ", I wove together data and pixels, translating designs into interactive web interfaces.",
+};
+
+export const projectsData = {
+  headingText: "Featured projects",
+  chipText: "Front-End Web Development",
+  cardHeading: "Stunning designs and User-Friendly Interfaces.",
+};
+
+export const ctaData = {
+  headingText: "Your partner in web development.",
+  subtext:
+    "I'm here to help you design and develop websites that engage and convert. Contact me to explore how we can work together on your next big project.",
+};
+
 export const projects = [
   {
     id: "project-1",

@@ -5,10 +5,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { staggerContainer } from "@/constants/motion";
 import ExploreCard from "../projects/ExploreCard";
-import { projects } from "@/constants";
+import { projects, projectsData } from "@/constants";
 import ButtonDark from "../ButtonDark";
 import { CgLinear } from "react-icons/cg";
 import Chip from "../Chip";
+
+const { headingText, chipText, cardHeading } = projectsData;
 
 const Projects = () => {
   const [active, setActive] = useState("project-2");
@@ -16,7 +18,7 @@ const Projects = () => {
   return (
     <section className="max-container flex flex-col items-center justify-center">
       <h3 className="mb-16 w-full text-center text-5xl tracking-[-2px] text-white sm:w-4/6 sm:text-6xl lg:text-7xl">
-        Featured projects
+        {headingText}
       </h3>
       <motion.div
         variants={staggerContainer}
@@ -30,12 +32,12 @@ const Projects = () => {
             <Chip
               chipStyles="bg-slate-300"
               textStyles="text-black text-base sm:text-lg"
-              text="Front-End Web Development"
+              text={chipText}
               icon={<CgLinear />}
             />
 
             <h3 className="text-4xl tracking-[-2px] sm:text-5xl lg:text-6xl">
-              Stunning designs and User-Friendly Interfaces.
+              {cardHeading}
             </h3>
           </div>
 

@@ -5,52 +5,50 @@ import DownloadCVBtn from "../DownloadCVBtn";
 import Image from "next/image";
 import avatar from "../../assets/hero/avatar_03.png";
 import ParticleContainer from "./ParticleContainer";
+import { heroData } from "@/constants";
 
-const Hero = () => {
-  return (
-    <section className="size-full bg-hero bg-cover bg-no-repeat px-8 sm:px-16">
-      {/* Particles */}
-      <ParticleContainer />
+const { headingText, headingSubtext } = heroData;
 
-      <div className="max-container flex min-h-screen w-full items-center">
-        {/* Text */}
-        <div className="absolute z-0 flex w-[310px] flex-col sm:w-fit">
-          <h1 className="ml-0 w-full font-primary text-6xl font-black leading-[55px] tracking-[-3px] text-white sm:ml-[-8px] sm:w-[670px] sm:text-8xl sm:leading-[90px] sm:tracking-[-6px]">
-            Front-End Web Developer
-          </h1>
-          <p className="my-7 w-full border-t-2 border-white pt-4 text-2xl tracking-[-0.5px] text-white sm:w-[500px] sm:text-3xl sm:tracking-[-1px]">
-            Hi, my name is <span className="">Brian Segers</span>. I&apos;m
-            passionate about creating beautiful and functional websites. If
-            you&apos;re looking for a dedicated front-end engineer, let&apos;s
-            connect and bring your vision to life!
-          </p>
+const Hero = () => (
+  <section className="size-full bg-hero bg-cover bg-no-repeat px-8 sm:px-16">
+    {/* Particles */}
+    <ParticleContainer />
 
-          <div className="flex w-fit items-center gap-4">
-            <Link href={"/Brian Segers Resume.pdf"} target="_blank" download>
-              <DownloadCVBtn dark={false} />
-            </Link>
+    <div className="max-container flex min-h-screen w-full items-center">
+      {/* Text */}
+      <div className="absolute z-0 flex w-[310px] flex-col sm:w-fit">
+        <h1 className="ml-0 w-full font-primary text-6xl font-black leading-[55px] tracking-[-3px] text-white sm:ml-[-8px] sm:w-[670px] sm:text-8xl sm:leading-[90px] sm:tracking-[-6px]">
+          {headingText}
+        </h1>
+        <p className="my-7 w-full border-t-2 border-white pt-4 text-2xl tracking-[-0.5px] text-white sm:w-[500px] sm:text-3xl sm:tracking-[-1px]">
+          {headingSubtext}
+        </p>
 
-            <Link href={"/contact"}>
-              <ButtonDark title={"Hire Me"} />
-            </Link>
-          </div>
-        </div>
+        <div className="flex w-fit items-center gap-4">
+          <Link href={"/Brian Segers Resume.pdf"} target="_blank" download>
+            <DownloadCVBtn dark={false} />
+          </Link>
 
-        {/* Image */}
-        <div className="absolute bottom-0 right-40">
-          <div className="hidden xl:flex xl:max-w-none">
-            <Image
-              src={avatar}
-              alt="avatar"
-              width={650}
-              height={720}
-              className="h-[820px] w-[750px] mix-blend-screen max-[1600px]:h-[720px] max-[1600px]:w-[650px]"
-            />
-          </div>
+          <Link href={"/contact"}>
+            <ButtonDark title={"Hire Me"} />
+          </Link>
         </div>
       </div>
-    </section>
-  );
-};
+
+      {/* Image */}
+      <div className="absolute bottom-0 right-40">
+        <div className="hidden xl:flex xl:max-w-none">
+          <Image
+            src={avatar}
+            alt="avatar"
+            width={650}
+            height={720}
+            className="h-[820px] w-[750px] mix-blend-screen max-[1600px]:h-[720px] max-[1600px]:w-[650px]"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export default Hero;
