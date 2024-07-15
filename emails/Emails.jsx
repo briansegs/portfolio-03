@@ -10,25 +10,17 @@ import {
   Preview,
 } from "@react-email/components";
 
-const data = {
-  name: "RedMan",
-  email: "reddot@wutang.com",
-  subject: "Let's make a banger together!",
-  message:
-    "Bring Method Man and the crew to my studio tomorrow. I have snacks and juice boxes if anyone gets peckish. Any time after daybreak is cool to come by.",
-};
-
 const main = {
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 };
 
-const Email = () => {
+const Email = ({ data }) => {
   const { name, email, subject, message } = data;
 
-  const maxLength = 30;
+  const maxLength = 50;
 
-  const previewText = `New message: ${name} - ${message.length > maxLength ? message.slice(0, maxLength) + "..." : message}`;
+  const previewText = `New message from your portfolio website: ${message.length > maxLength ? message.slice(0, maxLength) + "..." : message}`;
 
   return (
     <Html lang="en">
