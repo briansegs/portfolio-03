@@ -1,34 +1,8 @@
 import { NextResponse } from "next/server";
 import { transporter, mailOptions } from "@/constants/nodemailer";
-import { Html, isInvalidValue } from "@/components/contact/contactForm";
-
-const CONTACT_MESSAGE_FIELDS = {
-  name: "Name",
-  email: "Email",
-  subject: "Subject",
-  message: "Message",
-};
-
-const generateEmailContent = (data) => {
-  const stringData = Object.entries(data).reduce(
-    (str, [key, value]) =>
-      (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${value} \n \n}`),
-    ""
-  );
-
-  const htmlData = Object.entries(data).reduce(
-    (str, [key, value]) =>
-      (str += `<h1 className="font-normal text-left leading-5 text-lg mb-2 p-0">
-    ${CONTACT_MESSAGE_FIELDS[key]}
-    </h1>
-    <p className="font-light text-left leading-5 text-base mb-6 p-0">
-    ${value}
-    </p>`),
-    ""
-  );
-
-  return { text: stringData, html: Html(htmlData) };
-};
+import { render } from "@react-email/components";
+import { isInvalidValue } from "@/components/contact/contactForm";
+import Email from "@/emails/Emails";
 
 export async function POST(request) {
   if (request.method === "POST") {
@@ -46,11 +20,13 @@ export async function POST(request) {
       return NextResponse.json({ message: "Form is invalid" }, { status: 400 });
     }
 
+    const emailHtml = render(<Email data={data} />);
+
     try {
       await transporter.sendMail({
         ...mailOptions,
-        ...generateEmailContent(data),
         subject: data.subject,
+        html: emailHtml,
       });
 
       return NextResponse.json({ success: true }, { status: 200 });
