@@ -7,7 +7,7 @@ import avatar from "../../assets/hero/avatar_03.png";
 import ParticleContainer from "./ParticleContainer";
 import { heroData } from "@/constants";
 
-const { headingText, headingSubtext } = heroData;
+const { headingText, headingSubtext, buttonText } = heroData;
 
 const Hero = () => (
   <section className="size-full bg-hero bg-cover bg-no-repeat px-8 sm:px-16">
@@ -30,7 +30,7 @@ const Hero = () => (
           </Link>
 
           <Link href={"/contact"}>
-            <ButtonDark title={"Hire Me"} />
+            <ButtonDark title={buttonText} />
           </Link>
         </div>
       </div>

@@ -24,6 +24,7 @@ export const heroData = {
   headingText: "Front-End Web Developer",
   headingSubtext:
     "Hi, my name is Brian Segers I'm passionate about creating beautiful and functional websites. If you're looking for a dedicated front-end engineer, let's connect and bring your vision to life!",
+  buttonText: "Hire Me",
 };
 
 export const servicesData = {
@@ -42,18 +43,21 @@ export const aboutData = {
     "my most recent role as a Front-end Web Developer on Udacity's Student Experience team",
   paragraph2Part2:
     ", I wove together data and pixels, translating designs into interactive web interfaces.",
+  buttonText: "Hire Me",
 };
 
 export const projectsData = {
   headingText: "Featured projects",
   chipText: "Front-End Web Development",
   cardHeading: "Stunning designs and User-Friendly Interfaces.",
+  buttonText: "Projects",
 };
 
 export const ctaData = {
   headingText: "Your partner in web development.",
   subtext:
     "I'm here to help you design and develop websites that engage and convert. Contact me to explore how we can work together on your next big project.",
+  buttonText: "Hire Me",
 };
 
 export const projects = [
