@@ -21,8 +21,8 @@ const ExploreCard = ({
 }) => (
   <motion.div
     variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-    className={`relative ${active === id ? "flex-[10] lg:flex-[3.5]" : "flex-[2] lg:flex-[0.5]"} flex h-[700px] min-w-[170px] items-center justify-center transition-[flex] duration-[0.7s] ease-out`}
-    onMouseEnter={() => handleClick(id)}
+    className={`relative cursor-pointer ${active === id ? "flex-[10] lg:flex-[3.5]" : "flex-[2] lg:flex-[0.5]"} flex h-[700px] min-w-[170px] items-center transition-[flex] duration-[0.7s] ease-out xl:items-end`}
+    onClick={() => handleClick(id)}
   >
     <Image
       src={imgUrl}
@@ -30,12 +30,14 @@ const ExploreCard = ({
       className="absolute size-full rounded-md object-cover"
     />
     {active !== id ? (
-      <h3 className="absolute z-0 font-primary text-base font-bold tracking-[-0.4px] text-white sm:text-2xl xl:bottom-20 xl:origin-[0,0] xl:-rotate-90">
-        {title}
-      </h3>
+      <div className="z-0 flex h-2/5 w-full items-center justify-center xl:bg-gradient-to-t xl:from-black/90 xl:to-transparent">
+        <h3 className="absolute z-0 font-primary text-base font-bold tracking-[-0.4px] text-white sm:text-2xl xl:bottom-20 xl:origin-[0,0] xl:-rotate-90">
+          {title}
+        </h3>
+      </div>
     ) : (
       <div className="absolute bottom-0 w-full flex-col justify-start rounded-b-md bg-[rgba(0,0,0,0.9)] p-4 sm:p-8">
-        <div className="mb-3 flex gap-4 sm:mb-4">
+        <div className="mb-0 flex gap-4 lg:mb-4">
           <ProjectButton
             href={gitUrl}
             icon={<RxGithubLogo />}
@@ -59,7 +61,7 @@ const ExploreCard = ({
             />
           ))}
         </div>
-        <h2 className="text-xl font-bold text-white sm:mt-4 sm:text-3xl">
+        <h2 className="hidden text-xl font-bold text-white sm:mt-4 sm:text-3xl lg:block">
           {title}
         </h2>
       </div>
