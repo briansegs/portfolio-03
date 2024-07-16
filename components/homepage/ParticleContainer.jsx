@@ -14,7 +14,7 @@ const screenSize = {
 
 const ParticleContainer = () => {
   const [init, setInit] = useState(false);
-  const [windowWidth, setwindowWidth] = useState("");
+  const [windowWidth, setwindowWidth] = useState(0);
 
   useEffect(() => {
     if (init) {
