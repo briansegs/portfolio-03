@@ -2,7 +2,7 @@ import Link from "next/link";
 import ButtonDark from "../ButtonDark";
 import { ctaData } from "@/constants";
 
-const { headingText, subtext } = ctaData;
+const { headingText, subtext, buttonText } = ctaData;
 
 const CTA = () => (
   <section className="max-container w-full">
@@ -18,7 +18,7 @@ const CTA = () => (
 
       <div className="whitespace-nowrap">
         <Link href={"/contact"}>
-          <ButtonDark title={"Hire Me"} />
+          <ButtonDark title={buttonText} />
         </Link>
       </div>
     </div>

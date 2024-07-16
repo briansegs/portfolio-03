@@ -10,7 +10,7 @@ import ButtonDark from "../ButtonDark";
 import { CgLinear } from "react-icons/cg";
 import Chip from "../Chip";
 
-const { headingText, chipText, cardHeading } = projectsData;
+const { headingText, chipText, cardHeading, buttonText } = projectsData;
 
 const Projects = () => {
   const [active, setActive] = useState("project-2");
@@ -43,7 +43,7 @@ const Projects = () => {
 
           <div className="flex h-full flex-col justify-end whitespace-nowrap sm:h-[116px]">
             <Link href={"/projects"}>
-              <ButtonDark title={"Projects"} />
+              <ButtonDark title={buttonText} />
             </Link>
           </div>
         </div>

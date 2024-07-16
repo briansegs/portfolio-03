@@ -14,6 +14,7 @@ const {
   paragraph2Part1,
   paragraph2Part1Highlight,
   paragraph2Part2,
+  buttonText,
 } = aboutData;
 
 const About = () => {
@@ -40,7 +41,7 @@ const About = () => {
           </Link>
 
           <Link href={"/contact"}>
-            <ButtonDark title={"Hire Me"} />
+            <ButtonDark title={buttonText} />
           </Link>
         </div>
         <div className="mt-6 flex gap-4">
