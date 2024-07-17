@@ -80,7 +80,7 @@ const ProjectCard = () => {
                 </p>
 
                 {/* Project Description */}
-                <p className="font-primary text-lg leading-6 tracking-[-0.4px]">
+                <p className="custom-scrollbar h-[168px] overflow-y-scroll pr-1 font-primary text-lg leading-6 tracking-[-0.4px]">
                   {project.description}
                 </p>
               </div>
