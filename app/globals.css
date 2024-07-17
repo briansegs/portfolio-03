@@ -41,6 +41,19 @@
     backface-visibility: hidden;
     transform: rotateY(180deg);
   }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 0.375rem;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: none;
+  }
 }
 
 @layer utilities {
