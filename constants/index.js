@@ -69,8 +69,8 @@ export const projects = [
     descriptionTitle: "Q&A Platform Clone",
     description:
       "Created a replica of StackOverflow focusing on key functionalities such as user authentication, question submission, answer posting, and upvoting. Utilized React Hooks for state management, Next.js for routing and implemented responsive design using Tailwindcss.",
-    gitUrl: "https://github.com/briansegs/personal-blog/",
-    liveUrl: "https://briansegs.github.io/personal-blog/",
+    gitUrl: "https://github.com/briansegs/portfolio-03",
+    liveUrl: "https://briansegs.github.io/portfolio-03",
     stack: ["React", "Tailwindcss", "Next.js", "Mongo DB"],
   },
   {
