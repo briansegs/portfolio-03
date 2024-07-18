@@ -4,13 +4,5 @@
     "standard",
     "plugin:tailwindcss/recommended",
     "prettier"
-  ],
-  "rules": {
-    "react/no-unescaped-entites": "off",
-    "@typescript-eslint/quotes": "off",
-    "quotes": [0],
-    "avoidEscape": 0,
-    "allowTemplateLiterals": 0,
-    "no-useless-escape": 0
-  }
+  ]
 }

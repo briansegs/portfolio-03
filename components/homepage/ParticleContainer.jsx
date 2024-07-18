@@ -27,7 +27,7 @@ const ParticleContainer = () => {
       setInit(true);
       setwindowWidth(window.innerWidth);
     });
-  }, []);
+  }, );
 
   const handleResize = () => {
     const width = window.innerWidth;

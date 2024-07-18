@@ -18,7 +18,7 @@ const Grid1 = () => {
     }).then(() => {
       setInit(true);
     });
-  }, []);
+  }, );
   return (
     <div className="grid-frame bg-grid1 bg-contain bg-no-repeat">
       {init && (
