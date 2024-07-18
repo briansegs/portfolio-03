@@ -33,7 +33,7 @@ const SideMenu = () => {
 
         <div className="mb-12 mt-8 flex flex-col items-center gap-4">
           {navLinks.map((link) => (
-            <Link href={link.path} key={link.name}>
+            <Link href={link.path} key={link.name} onClick={handleClick}>
               <ButtonBase
                 title={link.name}
                 styles="bg-transparent py-[6px] px-[20px] text-4xl font-black tracking-[-0.7px] text-black hover:bg-secondary"
