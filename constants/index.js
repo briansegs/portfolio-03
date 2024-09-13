@@ -113,12 +113,12 @@ export const projects = [
     id: "project-5",
     type: "Front-End Web Development",
     imgUrl: img05,
-    title: "GPT-3",
-    descriptionTitle: "Responsive GPT-3 Landing Page",
+    title: "Meta Course Portfolio",
+    descriptionTitle: "A living portfolio showcasing my progress",
     description:
-      "Developed and deployed a fully responsive GPT-3 landing page using React.js, showcasing modern UI and UX principles. I transformed a Figma design by AR Shakir into a functional website.The process covered everything from design to deployment, making it an excellent project to enhance my CSS skills and learn React fundamentals. Key features include structured file and folder organization, CSS Flex and Grid, BEM methodology for CSS, complex gradients, and media queries for responsiveness across various devices.",
-    gitUrl: "https://github.com/briansegs/gpt-3/",
-    liveUrl: "https://briansegs.github.io/gpt-3/",
-    stack: ["React", "CSS 3"],
+      "This site, developed in React, is a living portfolio showcasing my progress, challenges, and successes as I deepen my understanding of Front-End development. Throughout the course, I've applied what I've learned, and I've also explored topics beyond the curriculum, such as routing and tools like Tailwindcss. Here, you'll find examples of labs, projects, and practice exercises, all demonstrating key concepts and techniques.",
+    gitUrl: "https://github.com/briansegs/meta-front-end_react-app",
+    liveUrl: "https://github.com/briansegs/meta-front-end_react-app",
+    stack: ["React", "Tailwindcss"],
   },
 ];
