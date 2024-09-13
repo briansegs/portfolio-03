@@ -23,11 +23,18 @@ const ProjectCard = () => {
       projects[index - 1] ? projects[index - 1] : projects[projects.length - 1]
     );
     setIndex(projects[index - 1] ? index - 1 : projects.length - 1);
+    scrollToTop();
   };
 
   const handleRightClick = () => {
     setProject(projects[index + 1] ? projects[index + 1] : projects[0]);
     setIndex(projects[index + 1] ? index + 1 : 0);
+    scrollToTop();
+  };
+
+  const scrollToTop = () => {
+    const paragraph = document.getElementById("project-description");
+    paragraph.scrollTop = 0;
   };
 
   return (
@@ -41,6 +48,7 @@ const ProjectCard = () => {
             onClick={() => {
               setProject(projects[idx]);
               setIndex(idx);
+              scrollToTop();
             }}
           >
             {p.title}
@@ -80,7 +88,10 @@ const ProjectCard = () => {
                 </p>
 
                 {/* Project Description */}
-                <p className="custom-scrollbar h-[168px] overflow-y-scroll pr-1 font-primary text-lg leading-6 tracking-[-0.4px]">
+                <p
+                  id="project-description"
+                  className="custom-scrollbar h-[168px] overflow-y-scroll pr-1 font-primary text-lg leading-6 tracking-[-0.4px]"
+                >
                   {project.description}
                 </p>
               </div>

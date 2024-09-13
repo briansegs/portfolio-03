@@ -113,8 +113,8 @@ export const projects = [
     id: "project-5",
     type: "Front-End Web Development",
     imgUrl: img05,
-    title: "Meta Course Portfolio",
-    descriptionTitle: "A living portfolio showcasing my progress",
+    title: "Course Portfolio",
+    descriptionTitle: "Documenting My Front-End Dev Journey",
     description:
       "This site, developed in React, is a living portfolio showcasing my progress, challenges, and successes as I deepen my understanding of Front-End development. Throughout the course, I've applied what I've learned, and I've also explored topics beyond the curriculum, such as routing and tools like Tailwindcss. Here, you'll find examples of labs, projects, and practice exercises, all demonstrating key concepts and techniques.",
     gitUrl: "https://github.com/briansegs/meta-front-end_react-app",
