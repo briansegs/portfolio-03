@@ -1,8 +1,55 @@
+# Web Portfolio - My Front-end Web Development Portfolio
+![site image](https://github.com/briansegs/portfolio-03/blob/main/assets/projects/project2.png)
+
+### Demo:
+View the site [here](https://portfolio-brians-projects-a35a0160.vercel.app/)
+
+## Table of contents
+- [About the app](#about-the-app)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Approach](#approach)
+- [Status](#status)
+- [Credits](#credits)
+
+## About the app:
+I needed a portfolio to display my current web development work and wanted to take on more challenges as a Front-End web developer. I wanted to build a multi-page website, design my UI/UX, create all the artwork, use new technologies like Next.js and particles, create interesting animations and effects, and have fully functioning features like sending emails through a contact form. This is a big step up for me but I have been studying a lot and I learn best by challenging myself through projects. 
+
+
+### The skills I learned after completing this project:
+- React functional components and their reusability
+- Next.js fundamentals
+- Next.js file and folder structure
+- Next.js routing
+- Fundamental CSS properties to improve my flex & grid skills
+- Practice styling with Tailwindcss 
+- Animations and gradients
+- Advanced Animations with Framer-motion
+- Practice with Media queries for satisfactory responsiveness covering almost all devices
+- Particles with tspartices
+- React-email and nodemailer
+- Sentry for error reporting 
+  
+
+## Technologies:
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+- Particle effects with [tsParticles](https://particles.js.org/)
+- Styling with [tailwindcss](https://tailwindcss.com/)
+- Advanced animations with [framer-motion](https://www.framer.com/motion/)
+- Emails with [nodemailer](https://nodemailer.com/) and [react email](https://react.email/)
+- Error reporting with [sentry](https://sentry.io/welcome/)
 
-First, run the development server:
+
+## Setup:
+Clone the project and enter its root directory.
+
+Install **Node.js** -> [Instructions](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
+
+### `npm i`
+Installs all of the project's dependencies.
+
+Next, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +63,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Approach:
+Because I wasn't working from a Figma design I needed to compile enough inspiration through sketches and images from the web to know what to build. Next, I created a basic Next.js app and set up the routing and file structure. After that, I added some basic styles to my CSS file that I knew I would be resuing. I built each section in the order they appear on the website, tweaking their responsiveness as I went and creating artwork in photoshop as needed. The design was more loose so I made a lot of design changes as I went. There was also a lot of experimenting with different technoligies to get the result I wanted. This was true for setting up the animations and email. This involved a lot of reading the documentation and trying things out. Lastly, I setup Sentry and deployed the site to Vercel's servers.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Status:
+This project is finished but will continue to be developed and updated.
 
-## Learn More
+## Credits:
+N/A
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
