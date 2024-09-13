@@ -26,7 +26,7 @@ I needed a portfolio to display my current web development work and wanted to ta
 - Animations and gradients
 - Advanced Animations with Framer-motion
 - Practice with Media queries for satisfactory responsiveness covering almost all devices
-- Particles with tspartices
+- Particles with tsparticles
 - React-email and nodemailer
 - Sentry for error reporting 
   
@@ -64,7 +64,7 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Approach:
-Because I wasn't working from a Figma design I needed to compile enough inspiration through sketches and images from the web to know what to build. Next, I created a basic Next.js app and set up the routing and file structure. After that, I added some basic styles to my CSS file that I knew I would be resuing. I built each section in the order they appear on the website, tweaking their responsiveness as I went and creating artwork in photoshop as needed. The design was more loose so I made a lot of design changes as I went. There was also a lot of experimenting with different technoligies to get the result I wanted. This was true for setting up the animations and email. This involved a lot of reading the documentation and trying things out. Lastly, I setup Sentry and deployed the site to Vercel's servers.
+Because I wasn't working from a Figma design I needed to compile enough inspiration through sketches and images from the web to know what to build. Next, I created a basic Next.js app and set up the routing and file structure. After that, I added some basic styles to my CSS file that I knew I would be resuing. I built each section in the order they appear on the website, tweaking their responsiveness as I went and creating artwork in Photoshop as needed. The design was more loose so I made a lot of design changes as I went. There was also a lot of experimenting with different technologies to get the result I wanted. This was true for setting up the animations and email. This involved a lot of reading the documentation and trying things out. Lastly, I set up Sentry and deployed the site to Vercel's servers.
 
 ## Status:
 This project is finished but will continue to be developed and updated.
