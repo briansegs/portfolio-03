@@ -70,7 +70,7 @@ export const projects = [
     description:
       "Created a replica of StackOverflow focusing on key functionalities such as user authentication, question submission, answer posting, and upvoting. Utilized React Hooks for state management, Next.js for routing and implemented responsive design using Tailwindcss.",
     gitUrl: "https://github.com/briansegs/StackFlow",
-    liveUrl: "https://briansegs.github.io/StackFlow",
+    liveUrl: "https://github.com/briansegs/StackFlow",
     stack: ["React", "Tailwindcss", "Next.js", "Mongo DB"],
   },
   {
@@ -118,7 +118,7 @@ export const projects = [
     description:
       "This site, developed in React, is a living portfolio showcasing my progress, challenges, and successes as I deepen my understanding of Front-End development. Throughout the course, I've applied what I've learned, and I've also explored topics beyond the curriculum, such as routing and tools like Tailwindcss. Here, you'll find examples of labs, projects, and practice exercises, all demonstrating key concepts and techniques.",
     gitUrl: "https://github.com/briansegs/meta-front-end_react-app",
-    liveUrl: "https://github.com/briansegs/meta-front-end_react-app",
+    liveUrl: "https://briansegs.github.io/meta-front-end_react-app/",
     stack: ["React", "Tailwindcss"],
   },
 ];
