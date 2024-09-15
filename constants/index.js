@@ -82,7 +82,7 @@ export const projects = [
     description:
       "Designed and developed a fully responsive portfolio website using React.js, Next.js, and Tailwind CSS. The project features a striking and interactive hero section utilizing React Particles, a skills section with smooth animations and transitions, and a stunning featured-projects section leveraging Framer Motion for complex animations. It includes a contact form integrated with React Email and Nodemailer, and a projects page that beautifully displays my work on a card slider. Key skills demonstrated include React state management, Tailwind CSS for styling, Next.js for routing, and Photoshop for all of the website's artwork.",
     gitUrl: "https://github.com/briansegs/portfolio-03/",
-    liveUrl: "https://portfolio-brians-projects-a35a0160.vercel.app/",
+    liveUrl: "https://briansegers-swe.com",
     stack: ["React", "Tailwindcss", "Next.js"],
   },
   {
