@@ -13,7 +13,7 @@ import Chip from "../Chip";
 const { headingText, chipText, cardHeading, buttonText } = projectsData;
 
 const Projects = () => {
-  const [active, setActive] = useState("project-2");
+  const [active, setActive] = useState("project-1");
 
   return (
     <section className="max-container flex flex-col items-center justify-center">
