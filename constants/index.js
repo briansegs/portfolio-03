@@ -21,7 +21,7 @@ export const socialLinks = [
 ];
 
 export const heroData = {
-  headingText: "Front-End Web Developer",
+  headingText: "Web Developer",
   headingSubtext:
     "Hi, my name is Brian Segers I'm passionate about creating beautiful and functional websites. If you're looking for a dedicated front-end engineer, let's connect and bring your vision to life!",
   buttonText: "Hire Me",
@@ -48,7 +48,7 @@ export const aboutData = {
 
 export const projectsData = {
   headingText: "Featured projects",
-  chipText: "Front-End Web Development",
+  chipText: "Web Development",
   cardHeading: "Stunning designs and User-Friendly Interfaces.",
   buttonText: "Projects",
 };
@@ -63,14 +63,14 @@ export const ctaData = {
 export const projects = [
   {
     id: "project-1",
-    type: "Front-End Web Development",
+    type: "Full-Stack Web Development",
     imgUrl: img01,
-    title: "Dev Overflow",
-    descriptionTitle: "Q&A Platform Clone",
+    title: "Dev Collective",
+    descriptionTitle: "Q&A Platform",
     description:
-      "Created a replica of StackOverflow focusing on key functionalities such as user authentication, question submission, answer posting, and upvoting. Utilized React Hooks for state management, Next.js for routing and implemented responsive design using Tailwindcss.",
+      "Created a StackOverflow inspired application focusing on key functionalities such as user authentication, question submission, answer posting, and upvoting. Utilized React Hooks for state management, Next.js for routing and implemented responsive design using Tailwindcss.",
     gitUrl: "https://github.com/briansegs/StackFlow",
-    liveUrl: "https://github.com/briansegs/StackFlow",
+    liveUrl: "https://stack-flow-ashy.vercel.app/",
     stack: ["React", "Tailwindcss", "Next.js", "Mongo DB"],
   },
   {
