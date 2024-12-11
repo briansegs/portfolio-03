@@ -1,29 +1,17 @@
 "use client";
 
 import { Skeleton } from "@/components/ui/skeleton";
-import { projects } from "@/constants";
-import { useState } from "react";
 
 const Loading = () => {
-  const [project] = useState(projects[0]);
-
   return (
     <section className="xl:padding-x ">
       <div className="max-container min-h-screen w-full ">
         <div className="padding flex flex-col items-center">
-          <h1 className="pb-8 pt-6 text-6xl tracking-[-2px] text-black max-sm:mt-10 max-sm:text-5xl max-sm:tracking-[-1px]">
-            My Projects
-          </h1>
-
+          <Skeleton className="my-6  h-[70px] w-80 pb-8 pt-6 max-sm:mt-10 max-sm:h-[58px]" />
           <>
             <div className="flex gap-4 max-sm:flex-col max-sm:items-center">
-              {projects.map((p, idx) => (
-                <p
-                  key={p.id}
-                  className={`cursor-pointer font-primary text-xl font-bold tracking-[-0.4px] duration-500 ease-out ${p.id === project.id ? "text-black" : "text-black/40"} hover:text-black`}
-                >
-                  {p.title}
-                </p>
+              {[1, 2, 3, 4, 5].map((key, index) => (
+                <Skeleton key={key + index} className="h-8 w-36" />
               ))}
             </div>
 
