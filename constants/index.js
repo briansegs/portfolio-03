@@ -23,7 +23,7 @@ export const socialLinks = [
 export const heroData = {
   headingText: "Web Developer",
   headingSubtext:
-    "Hi, my name is Brian Segers I'm passionate about creating beautiful and functional websites. If you're looking for a dedicated front-end engineer, let's connect and bring your vision to life!",
+    "Hi, my name is Brian Segers. I’m a Web Developer based in Pennsylvania, with a focus on front-end development with React and Next.js.",
   buttonText: "Hire Me",
 };
 
@@ -33,16 +33,15 @@ export const servicesData = {
 
 export const aboutData = {
   headingText: "About me",
-  paragraph1Part1:
-    "Hey there! I'm passionate about crafting digital experiences that come alive on the web. As",
-  paragraph1Part1Highlight: "a seasoned 3D Artist turned Software Engineer",
+  paragraph1Part1: "Hi, I'm",
+  paragraph1Part1Highlight: "Brian Segers",
   paragraph1Part2:
-    ", I've danced between pixels and code, blending creativity with logic. My journey began in the captivating world of visual art, where I sculpted virtual landscapes and breathed life into characters. However, the allure of the digital canvas led me to pivot toward the dynamic realm of web development.",
-  paragraph2Part1: "In",
+    ", a Software Engineer with a background as a 3D Artist. I’ve combined creativity and technical skill throughout my career, starting with crafting virtual landscapes, characters, and 3D printed products before transitioning to web development.",
+  paragraph2Part1: "In my most recent role as a",
   paragraph2Part1Highlight:
-    "my most recent role as a Front-end Web Developer on Udacity's Student Experience team",
+    " Front-end Web Developer on Udacity's Student Experience team",
   paragraph2Part2:
-    ", I wove together data and pixels, translating designs into interactive web interfaces.",
+    ", I turned Figma designs into fully functional, interactive web interfaces. I also work as a freelance web developer, building full-stack applications and enhancing front-end features for existing projects.",
   buttonText: "Hire Me",
 };
 
