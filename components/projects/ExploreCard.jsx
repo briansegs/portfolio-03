@@ -30,7 +30,7 @@ const ExploreCard = ({
       className="absolute size-full rounded-md object-cover"
     />
     {active !== id ? (
-      <div className="z-0 flex h-2/5 w-full items-center justify-center xl:bg-gradient-to-t xl:from-black/90 xl:to-transparent">
+      <div className="z-0 flex h-2/5 w-full items-center justify-center rounded-b-md xl:bg-gradient-to-t xl:from-black/90 xl:to-transparent">
         <h3 className="absolute z-0 font-primary text-base font-bold tracking-[-0.4px] text-white sm:text-2xl xl:bottom-20 xl:origin-[0,0] xl:-rotate-90">
           {title}
         </h3>
