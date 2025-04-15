@@ -4,15 +4,20 @@ import DownloadCVBtn from "../DownloadCVBtn";
 
 import Image from "next/image";
 import avatar from "../../assets/hero/avatar_03.png";
-import ParticleContainer from "./ParticleContainer";
+// import ParticleContainer from "./ParticleContainer";
 import { heroData } from "@/constants";
+import { lazy, Suspense } from "react";
 
 const { headingText, headingSubtext, buttonText } = heroData;
+
+const ParticleContainer = lazy(() => import("./ParticleContainer"));
 
 const Hero = () => (
   <section className="size-full bg-hero bg-cover bg-no-repeat px-8 sm:px-16">
     {/* Particles */}
-    <ParticleContainer />
+    <Suspense fallback={null}>
+      <ParticleContainer />
+    </Suspense>
 
     <div className="max-container flex min-h-screen w-full items-center">
       {/* Text */}

@@ -3,6 +3,7 @@ import "./globals.css";
 // Section components
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+import ParticlePreloader from "@/components/ParticlePreloader";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="relative font-secondary">
         <Toaster />
+        <ParticlePreloader />
         <Nav className="padding-x absolute z-10 w-full py-8" />
         {children}
         <Footer />

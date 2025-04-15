@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadFull } from "tsparticles";
+import Particles from "@tsparticles/react";
 
 const screenSize = {
   sm: 640,
@@ -17,17 +16,11 @@ const ParticleContainer = () => {
   const [windowWidth, setwindowWidth] = useState(0);
 
   useEffect(() => {
-    if (init) {
-      return;
-    }
-
-    initParticlesEngine(async (engine) => {
-      await loadFull(engine);
-    }).then(() => {
+    if (window && !init) {
       setInit(true);
       setwindowWidth(window.innerWidth);
-    });
-  }, );
+    }
+  }, [init]);
 
   const handleResize = () => {
     const width = window.innerWidth;
@@ -35,6 +28,7 @@ const ParticleContainer = () => {
   };
 
   useEffect(() => {
+    setwindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize, { passive: true });
 
     return () => {
