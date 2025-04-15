@@ -6,7 +6,7 @@ import Image from "next/image";
 import avatar from "../../assets/hero/avatar_03.png";
 import bgHero from "../../assets/hero/bg_01.png";
 import { heroData } from "@/constants";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import Head from "next/head";
 
 const ParticleContainer = lazy(() => import("./ParticleContainer"), {
