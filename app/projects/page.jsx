@@ -1,22 +1,17 @@
 import ProjectSection from "@/components/projects/ProjectSection";
-import projectsHero from "@/assets/projects/bg_06.png";
+import projectsHero from "@/assets/projects/bgProjects.webp";
 import Image from "next/image";
-import Head from "next/head";
 
 const page = () => {
   return (
     <section className="xl:padding-x relative">
-      {/* Preload the background image */}
-      <Head>
-        <link rel="preload" as="image" href={projectsHero.src} />
-      </Head>
-
       {/* Background image**/}
       <Image
         src={projectsHero}
         alt="Projects Hero"
         fill
         priority
+        placeholder="blur"
         className="-z-10 object-cover object-right"
       />
 

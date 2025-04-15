@@ -3,11 +3,10 @@ import ButtonDark from "../ButtonDark";
 import DownloadCVBtn from "../DownloadCVBtn";
 
 import Image from "next/image";
-import avatar from "../../assets/hero/avatar_03.png";
-import bgHero from "../../assets/hero/bg_01.png";
+import avatar from "../../assets/hero/avatar_03.webp";
+import bgHero from "../../assets/hero/bgHero.webp";
 import { heroData } from "@/constants";
 import { lazy } from "react";
-import Head from "next/head";
 
 const ParticleContainer = lazy(() => import("./ParticleContainer"), {
   ssr: false,
@@ -18,11 +17,6 @@ const { headingText, headingSubtext, buttonText } = heroData;
 
 const Hero = () => (
   <section className="relative size-full px-8 sm:px-16">
-    {/* Preload Hero Background */}
-    <Head>
-      <link rel="preload" as="image" href={bgHero} />
-    </Head>
-
     {/* Background Image */}
     <Image
       src={bgHero}
