@@ -4,24 +4,45 @@ import DownloadCVBtn from "../DownloadCVBtn";
 
 import Image from "next/image";
 import avatar from "../../assets/hero/avatar_03.png";
-// import ParticleContainer from "./ParticleContainer";
+import bgHero from "../../assets/hero/bg_01.png";
 import { heroData } from "@/constants";
 import { lazy, Suspense } from "react";
+import Head from "next/head";
+
+const ParticleContainer = lazy(() => import("./ParticleContainer"), {
+  ssr: false,
+  loading: () => null,
+});
 
 const { headingText, headingSubtext, buttonText } = heroData;
 
-const ParticleContainer = lazy(() => import("./ParticleContainer"));
-
 const Hero = () => (
   <section className="size-full bg-hero bg-cover bg-no-repeat px-8 sm:px-16">
+    {/* Preload Hero Background */}
+    <Head>
+      <link rel="preload" as="image" href={bgHero} />
+    </Head>
+
+    {/* Background Image */}
+    <Image
+      src={bgHero}
+      alt="Hero Background"
+      fill
+      priority
+      placeholder="blur"
+      className="-z-10 object-cover"
+    />
+
     {/* Particles */}
-    <Suspense
+    {/* <Suspense
       fallback={
         <div className="absolute inset-0 animate-pulse bg-hero opacity-30" />
       }
     >
       <ParticleContainer />
-    </Suspense>
+    </Suspense> */}
+
+    <ParticleContainer />
 
     <div className="max-container flex min-h-screen w-full items-center">
       {/* Text */}
@@ -52,6 +73,8 @@ const Hero = () => (
             alt="avatar"
             width={650}
             height={720}
+            priority
+            quality={75}
             className="h-[820px] w-[750px] mix-blend-screen max-[1600px]:h-[720px] max-[1600px]:w-[650px]"
           />
         </div>
