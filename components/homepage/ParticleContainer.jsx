@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadFull } from "tsparticles";
+import Particles from "@tsparticles/react";
 
 const screenSize = {
   sm: 640,
@@ -12,162 +11,157 @@ const screenSize = {
   wide: 1440,
 };
 
-const ParticleContainer = () => {
-  const [init, setInit] = useState(false);
-  const [windowWidth, setwindowWidth] = useState(0);
-
-  useEffect(() => {
-    if (init) {
-      return;
-    }
-
-    initParticlesEngine(async (engine) => {
-      await loadFull(engine);
-    }).then(() => {
-      setInit(true);
-      setwindowWidth(window.innerWidth);
-    });
-  }, );
-
-  const handleResize = () => {
-    const width = window.innerWidth;
-    setwindowWidth(width);
+const debounce = (fn, delay = 300) => {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => fn(...args), delay);
   };
+};
 
+const getBreakpoint = (width) => {
+  const { sm, md, lg, xl, wide } = screenSize;
+  if (width < sm) return "sm";
+  if (width < md) return "md";
+  if (width < lg) return "lg";
+  if (width < xl) return "xl";
+  if (width < wide) return "wide";
+  return "max";
+};
+
+const ParticleContainer = () => {
+  const [breakpoint, setBreakpoint] = useState(() =>
+    typeof window !== "undefined" ? getBreakpoint(window.innerWidth) : "sm"
+  );
+
+  // Handle resize and update breakpoint
   useEffect(() => {
-    window.addEventListener("resize", handleResize, { passive: true });
+    if (typeof window === "undefined") return;
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    const handleResize = debounce(() => {
+      const newBreakpoint = getBreakpoint(window.innerWidth);
+      setBreakpoint((prev) => (prev !== newBreakpoint ? newBreakpoint : prev));
+    });
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const { sm, md, lg, xl, wide } = screenSize;
-
-  const particleAmount = () => {
-    switch (true) {
-      case windowWidth < sm:
-        return 200;
-      case windowWidth < md:
-        return 400;
-      case windowWidth < lg:
-        return 600;
-      case windowWidth < xl:
-        return 800;
-      case windowWidth < wide:
-        return 900;
-      default:
-        return 1000;
-    }
-  };
+  // Map breakpoint to particle amount
+  const particleAmount = {
+    sm: 200,
+    md: 400,
+    lg: 600,
+    xl: 800,
+    wide: 900,
+    max: 1000,
+  }[breakpoint];
 
   return (
     <div className="absolute inset-0">
-      {init && (
-        <Particles
-          className="h-screen w-full"
-          options={{
-            interactivity: {
-              events: {
-                onHover: {
-                  enable: true,
-                  mode: "bubble",
-                },
-                onClick: {
-                  enable: true,
-                  mode: "push",
-                },
+      <Particles
+        className="h-screen w-full"
+        options={{
+          interactivity: {
+            events: {
+              onHover: {
+                enable: true,
+                mode: "bubble",
               },
-              modes: {
-                bubble: {
-                  distance: 90,
-                  duration: 2,
-                  opacity: 1,
-                  size: 16,
-                  color: {
-                    value: ["#fff", "#fff", "#fff", "#00ffff", "#fffeac"],
-                  },
-                },
-                connect: {
-                  distance: 80,
-                  links: {
-                    opacity: 0.5,
-                  },
-                  radius: 60,
-                },
-                grab: {
-                  distance: 200,
-                  links: {
-                    opacity: 1,
-                  },
-                },
-                push: {
-                  quantity: 8,
-                },
-                remove: {
-                  quantity: 2,
-                },
-                repulse: {
-                  distance: 400,
-                  duration: 0.4,
-                },
-                slow: {
-                  active: false,
-                  radius: 0,
-                  factor: 10,
-                },
+              onClick: {
+                enable: true,
+                mode: "push",
               },
             },
-            particles: {
-              color: {
-                value: ["#fff", "#fff", "#fffeb8", "#fffc4c", "#00ffff"],
-              },
-              links: {
-                blink: false,
+            modes: {
+              bubble: {
+                distance: 90,
+                duration: 2,
+                opacity: 1,
+                size: 16,
                 color: {
-                  value: "#fff",
-                },
-                consent: false,
-                distance: 18,
-                enable: true,
-                opacity: 0.4,
-                width: 0.5,
-              },
-              move: {
-                enable: true,
-                outModes: "bounce",
-                speed: 0.2,
-              },
-              number: {
-                density: {
-                  enable: false,
-                },
-                value: particleAmount(),
-              },
-              opacity: {
-                animation: {
-                  enable: true,
-                  speed: 0.8,
-                  sync: false,
-                },
-                value: {
-                  min: 0,
-                  max: 0.4,
+                  value: ["#fff", "#fff", "#fff", "#00ffff", "#fffeac"],
                 },
               },
-              shape: {
-                type: "edge",
+              connect: {
+                distance: 80,
+                links: {
+                  opacity: 0.5,
+                },
+                radius: 60,
               },
-              size: {
-                value: 2,
+              grab: {
+                distance: 200,
+                links: {
+                  opacity: 1,
+                },
+              },
+              push: {
+                quantity: 8,
+              },
+              remove: {
+                quantity: 2,
+              },
+              repulse: {
+                distance: 400,
+                duration: 0.4,
+              },
+              slow: {
+                active: false,
+                radius: 0,
+                factor: 10,
               },
             },
-            fullScreen: {
-              enable: false,
+          },
+          particles: {
+            color: {
+              value: ["#fff", "#fff", "#fffeb8", "#fffc4c", "#00ffff"],
             },
-          }}
-        />
-      )}
+            links: {
+              blink: false,
+              color: {
+                value: "#fff",
+              },
+              consent: false,
+              distance: 18,
+              enable: true,
+              opacity: 0.4,
+              width: 0.5,
+            },
+            move: {
+              enable: true,
+              outModes: "bounce",
+              speed: 0.2,
+            },
+            number: {
+              density: {
+                enable: false,
+              },
+              value: particleAmount,
+            },
+            opacity: {
+              animation: {
+                enable: true,
+                speed: 0.8,
+                sync: false,
+              },
+              value: {
+                min: 0,
+                max: 0.4,
+              },
+            },
+            shape: {
+              type: "edge",
+            },
+            size: {
+              value: 2,
+            },
+          },
+          fullScreen: {
+            enable: false,
+          },
+        }}
+      />
     </div>
   );
 };
