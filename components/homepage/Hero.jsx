@@ -15,7 +15,11 @@ const ParticleContainer = lazy(() => import("./ParticleContainer"));
 const Hero = () => (
   <section className="size-full bg-hero bg-cover bg-no-repeat px-8 sm:px-16">
     {/* Particles */}
-    <Suspense fallback={null}>
+    <Suspense
+      fallback={
+        <div className="absolute inset-0 animate-pulse bg-hero opacity-30" />
+      }
+    >
       <ParticleContainer />
     </Suspense>
 

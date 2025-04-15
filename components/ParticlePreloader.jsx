@@ -5,7 +5,9 @@ import { preloadParticles } from "@/lib/utils";
 
 const ParticlePreloader = () => {
   useEffect(() => {
-    preloadParticles();
+    preloadParticles().catch((error) => {
+      console.error("Failed to prelaod particles:", error);
+    });
   }, []);
 
   return null;
