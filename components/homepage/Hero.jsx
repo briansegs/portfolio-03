@@ -17,7 +17,7 @@ const ParticleContainer = lazy(() => import("./ParticleContainer"), {
 const { headingText, headingSubtext, buttonText } = heroData;
 
 const Hero = () => (
-  <section className="size-full bg-hero bg-cover bg-no-repeat px-8 sm:px-16">
+  <section className="relative size-full px-8 sm:px-16">
     {/* Preload Hero Background */}
     <Head>
       <link rel="preload" as="image" href={bgHero} />
@@ -29,19 +29,10 @@ const Hero = () => (
       alt="Hero Background"
       fill
       priority
-      placeholder="blur"
       className="-z-10 object-cover"
     />
 
     {/* Particles */}
-    {/* <Suspense
-      fallback={
-        <div className="absolute inset-0 animate-pulse bg-hero opacity-30" />
-      }
-    >
-      <ParticleContainer />
-    </Suspense> */}
-
     <ParticleContainer />
 
     <div className="max-container flex min-h-screen w-full items-center">
@@ -65,7 +56,7 @@ const Hero = () => (
         </div>
       </div>
 
-      {/* Image */}
+      {/* Avatar Image */}
       <div className="absolute bottom-0 right-40">
         <div className="hidden xl:flex xl:max-w-none">
           <Image
