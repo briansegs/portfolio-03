@@ -9,6 +9,7 @@ const Grid3 = () => (
       src={grid3Image}
       alt="Grid 3 image"
       fill
+      blur
       className="-z-10 object-contain"
     />
 

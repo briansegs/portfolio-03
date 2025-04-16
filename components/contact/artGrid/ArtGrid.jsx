@@ -18,6 +18,7 @@ const ArtGrid = () => (
           src={grid1Image}
           alt="Grid 1 image"
           fill
+          blur
           className="-z-10 object-cover"
         />
         <Grid1 />
