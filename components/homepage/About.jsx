@@ -5,6 +5,7 @@ import SocialLinks from "../SocialLinks";
 import DownloadCVBtn from "../DownloadCVBtn";
 import { aboutData } from "@/constants";
 import { ImageMedia } from "../ImageMedia";
+import bgHero from "@/assets/hero/bgHero.webp";
 
 const {
   headingText,
@@ -49,7 +50,15 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex h-[930px] w-full flex-1 items-center justify-center rounded-md bg-about bg-auto bg-no-repeat max-xl:my-8">
+      <div className="relative flex h-[930px] w-full flex-1 items-center justify-center overflow-hidden rounded-md  max-xl:my-8">
+        <ImageMedia
+          src={bgHero}
+          alt="About background"
+          fill
+          blur
+          className="-z-10 object-cover object-top"
+        />
+
         <div className="mx-2 my-8 rounded-md bg-white/70 p-4">
           <ImageMedia
             src={aboutImg}
