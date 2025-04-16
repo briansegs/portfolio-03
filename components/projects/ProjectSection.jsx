@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 import RoundArrowButton from "@/components/projects/RoundArrowButton";
 import ProjectButton from "./ProjectButton";
@@ -13,6 +12,7 @@ import { RxGithubLogo } from "react-icons/rx";
 import { LuMonitor } from "react-icons/lu";
 
 import { projects } from "@/constants";
+import { ImageMedia } from "../ImageMedia";
 
 const ProjectCard = () => {
   const [project, setProject] = useState(projects[0]);
@@ -132,7 +132,7 @@ const ProjectCard = () => {
 
           {/* Right Image */}
           <div className="w-full xl:w-3/5">
-            <Image
+            <ImageMedia
               src={project.imgUrl}
               alt={project.title}
               className="size-full object-cover"

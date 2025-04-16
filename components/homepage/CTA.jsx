@@ -1,15 +1,15 @@
 import Link from "next/link";
 import ButtonDark from "../ButtonDark";
 import { ctaData } from "@/constants";
-import Image from "next/image";
 import bgHero from "@/assets/hero/bgHero.webp";
+import { ImageMedia } from "../ImageMedia";
 
 const { headingText, subtext, buttonText } = ctaData;
 
 const CTA = () => (
   <section className="max-container w-full">
     <div className="relative flex flex-col items-center justify-between gap-8 overflow-hidden rounded-lg p-8 xl:flex-row">
-      <Image
+      <ImageMedia
         src={bgHero}
         alt="Cta background"
         fill

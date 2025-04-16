@@ -1,10 +1,10 @@
 import ButtonDark from "../ButtonDark";
-import Image from "next/image";
 import Link from "next/link";
-import aboutImg from "../../assets/about/about_img.png";
+import aboutImg from "../../assets/about/about_img.webp";
 import SocialLinks from "../SocialLinks";
 import DownloadCVBtn from "../DownloadCVBtn";
 import { aboutData } from "@/constants";
+import { ImageMedia } from "../ImageMedia";
 
 const {
   headingText,
@@ -51,7 +51,7 @@ const About = () => {
 
       <div className="flex h-[930px] w-full flex-1 items-center justify-center rounded-md bg-about bg-auto bg-no-repeat max-xl:my-8">
         <div className="mx-2 my-8 rounded-md bg-white/70 p-4">
-          <Image
+          <ImageMedia
             src={aboutImg}
             alt="about-image"
             width={600}
