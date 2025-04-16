@@ -2,11 +2,11 @@ import Link from "next/link";
 import ButtonDark from "../ButtonDark";
 import DownloadCVBtn from "../DownloadCVBtn";
 
-import Image from "next/image";
 import avatar from "../../assets/hero/avatar_03.webp";
 import bgHero from "../../assets/hero/bgHero.webp";
 import { heroData } from "@/constants";
 import { lazy } from "react";
+import { ImageMedia } from "../ImageMedia";
 
 const ParticleContainer = lazy(() => import("./ParticleContainer"), {
   ssr: false,
@@ -18,7 +18,7 @@ const { headingText, headingSubtext, buttonText } = heroData;
 const Hero = () => (
   <section className="relative size-full px-8 sm:px-16">
     {/* Background Image */}
-    <Image
+    <ImageMedia
       src={bgHero}
       alt="Hero Background"
       fill
@@ -53,13 +53,12 @@ const Hero = () => (
       {/* Avatar Image */}
       <div className="absolute bottom-0 right-40">
         <div className="hidden xl:flex xl:max-w-none">
-          <Image
+          <ImageMedia
             src={avatar}
             alt="avatar"
             width={650}
             height={720}
             priority
-            quality={75}
             className="h-[820px] w-[750px] mix-blend-screen max-[1600px]:h-[720px] max-[1600px]:w-[650px]"
           />
         </div>

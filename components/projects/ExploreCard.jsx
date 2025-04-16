@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/motion";
 import { RxGithubLogo } from "react-icons/rx";
 import { LuMonitor } from "react-icons/lu";
 import Chip from "../Chip";
 import ProjectButton from "./ProjectButton";
+import { ImageMedia } from "../ImageMedia";
 
 const ExploreCard = ({
   id,
@@ -24,9 +24,10 @@ const ExploreCard = ({
     className={`relative ${active === id ? "flex-[10] lg:flex-[3.5]" : "flex-[2]  cursor-pointer lg:flex-[0.5]"} flex h-[700px] min-w-[170px] items-center transition-[flex] duration-[0.7s] ease-out xl:items-end`}
     onClick={() => handleClick(id)}
   >
-    <Image
+    <ImageMedia
       src={imgUrl}
       alt={title}
+      blur
       className="absolute size-full rounded-md object-cover"
     />
     {active !== id ? (

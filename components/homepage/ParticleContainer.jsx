@@ -2,25 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Particles from "@tsparticles/react";
-
-const screenSize = {
-  sm: 640,
-  md: 768,
-  lg: 1024,
-  xl: 1280,
-  wide: 1440,
-};
-
-const debounce = (fn, delay = 300) => {
-  let timeout;
-  return (...args) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => fn(...args), delay);
-  };
-};
+import { debounce, screenSizes } from "@/lib/utils";
 
 const getBreakpoint = (width) => {
-  const { sm, md, lg, xl, wide } = screenSize;
+  const { sm, md, lg, xl, wide } = screenSizes;
   if (width < sm) return "sm";
   if (width < md) return "md";
   if (width < lg) return "lg";

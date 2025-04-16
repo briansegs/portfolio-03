@@ -1,17 +1,16 @@
 import ProjectSection from "@/components/projects/ProjectSection";
 import projectsHero from "@/assets/projects/bgProjects.webp";
-import Image from "next/image";
+import { ImageMedia } from "@/components/ImageMedia";
 
 const page = () => {
   return (
     <section className="xl:padding-x relative">
       {/* Background image**/}
-      <Image
+      <ImageMedia
         src={projectsHero}
         alt="Projects Hero"
         fill
         priority
-        placeholder="blur"
         className="-z-10 object-cover object-right"
       />
 
