@@ -16,11 +16,11 @@ const ProjectSection = dynamic(
         </div>
 
         <div className="mt-7 flex w-full items-center justify-between">
-          <Skeleton className="size-[56px] rounded-full max-sm:hidden" />
+          <Skeleton className="size-14 rounded-full max-sm:hidden" />
 
           <Skeleton className="h-[646px] w-3/4 rounded-md  max-sm:w-full" />
 
-          <Skeleton className="size-[56px] rounded-full max-sm:hidden" />
+          <Skeleton className="size-14 rounded-full max-sm:hidden" />
         </div>
       </>
     ),
