@@ -1,6 +1,5 @@
 import "./globals.css";
 
-// Section components
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import ParticlePreloader from "@/components/ParticlePreloader";

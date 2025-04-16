@@ -1,4 +1,12 @@
-import { Grid1, Grid2, Grid3, Grid4 } from ".";
+import dynamic from "next/dynamic";
+import { Grid2, Grid3, Grid4 } from ".";
+
+const Grid1 = dynamic(() => import("./Grid1"), {
+  ssr: false,
+  loading: () => (
+    <div className="grid-frame bg-grid1 bg-contain bg-no-repeat"></div>
+  ),
+});
 
 const frameSize = "size-72";
 
