@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/motion";
 import { RxGithubLogo } from "react-icons/rx";
 import { LuMonitor } from "react-icons/lu";
-import Chip from "../Chip";
-import ProjectButton from "./ProjectButton";
-import { ImageMedia } from "../ImageMedia";
+import Chip from "../../Chip";
+import ProjectButton from "../../projects/ProjectButton";
+import { ImageMedia } from "../../ImageMedia";
 
 const ExploreCard = ({
   id,

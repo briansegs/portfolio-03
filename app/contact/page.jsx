@@ -1,5 +1,14 @@
-import { ContactForm } from "@/components/contact/contactForm";
 import { ArtGrid } from "@/components/contact/artGrid";
+import dynamic from "next/dynamic";
+import Loading from "@/components/Loading";
+
+const ContactForm = dynamic(
+  () => import("@/components/contact/contactForm/ContactForm"),
+  {
+    ssr: false,
+    loading: () => <Loading />,
+  }
+);
 
 const page = () => {
   return (

@@ -17,11 +17,6 @@ module.exports = {
         primary: "#f87171",
         secondary: "#eff6ff",
       },
-      backgroundImage: {
-        about: "url('/about_bg.png')",
-        grid1: "url('/frame_01.png')",
-        grid3: "url('/frame_03.png')",
-      },
       screens: {
         wide: "1440px",
       },

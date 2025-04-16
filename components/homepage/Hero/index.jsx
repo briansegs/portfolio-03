@@ -1,14 +1,14 @@
 import Link from "next/link";
-import ButtonDark from "../ButtonDark";
-import DownloadCVBtn from "../DownloadCVBtn";
+import ButtonDark from "@/components/ButtonDark";
+import DownloadCVBtn from "@/components/DownloadCVBtn";
 
-import avatar from "../../assets/hero/avatar_03.webp";
-import bgHero from "../../assets/hero/bgHero.webp";
+import avatar from "@/assets/hero/avatar_03.webp";
+import bgHero from "@/assets/hero/bgHero.webp";
 import { heroData } from "@/constants";
-import { lazy } from "react";
-import { ImageMedia } from "../ImageMedia";
+import { ImageMedia } from "@/components/ImageMedia";
+import dynamic from "next/dynamic";
 
-const ParticleContainer = lazy(() => import("./ParticleContainer"), {
+const ParticleContainer = dynamic(() => import("./ParticleContainer"), {
   ssr: false,
   loading: () => null,
 });

@@ -1,32 +1,31 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { staggerContainer } from "@/constants/motion";
-import ExploreCard from "../projects/ExploreCard";
-import { projects, projectsData } from "@/constants";
-import ButtonDark from "../ButtonDark";
+import { projectsData } from "@/constants";
+import ButtonDark from "../../ButtonDark";
 import { CgLinear } from "react-icons/cg";
-import Chip from "../Chip";
+import Chip from "../../Chip";
+import { LoaderCircle } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const ExploreCardContainer = dynamic(() => import("./ExploreCardContainer"), {
+  ssr: false,
+  loading: () => (
+    <div className="mt-8 flex min-h-[700px] items-center  justify-center gap-2 font-primary text-4xl text-slate-200">
+      <LoaderCircle className="size-14 animate-spin " />
+      Loading...
+    </div>
+  ),
+});
 
 const { headingText, chipText, cardHeading, buttonText } = projectsData;
 
 const Projects = () => {
-  const [active, setActive] = useState("project-1");
-
   return (
     <section className="max-container flex flex-col items-center justify-center">
       <h3 className="mb-16 w-full text-center text-5xl tracking-[-2px] text-white sm:w-4/6 sm:text-6xl lg:text-7xl">
         {headingText}
       </h3>
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className="flex w-full flex-col rounded-md bg-white p-6"
-      >
+
+      <div className="flex w-full flex-col rounded-md bg-white p-6">
         <div className="flex w-full items-start justify-between gap-4 max-sm:mb-2 max-sm:flex-col sm:items-center">
           <div className="flex flex-col gap-4">
             <Chip
@@ -48,18 +47,8 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="mt-8 flex min-h-[70vh] flex-col gap-5 xl:flex-row">
-          {projects.map((project, index) => (
-            <ExploreCard
-              key={project.id}
-              {...project}
-              index={index}
-              active={active}
-              handleClick={setActive}
-            />
-          ))}
-        </div>
-      </motion.div>
+        <ExploreCardContainer />
+      </div>
     </section>
   );
 };

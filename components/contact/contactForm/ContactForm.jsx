@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import {
   ContactButton,
@@ -11,7 +11,6 @@ import {
   ToastFail,
 } from ".";
 import { sendContactForm } from "@/lib/api";
-import Loading from "@/components/Loading";
 
 const initValues = {
   name: "",
@@ -24,7 +23,6 @@ const initState = { values: initValues };
 
 const ContactForm = () => {
   const [state, setState] = useState(initState);
-  const [isClient, setIsClient] = useState(false);
   const { toast } = useToast();
 
   const { values, isLoading, visited } = state;
@@ -76,12 +74,6 @@ const ContactForm = () => {
       });
     }
   };
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) return <Loading />;
 
   return (
     <form
