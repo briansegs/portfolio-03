@@ -1,6 +1,6 @@
 import ButtonDark from "../ButtonDark";
 import Link from "next/link";
-import aboutImg from "../../assets/about/about_img.webp";
+import aboutImg from "@/assets/about/about_img.webp";
 import SocialLinks from "../SocialLinks";
 import DownloadCVBtn from "../DownloadCVBtn";
 import { aboutData } from "@/constants";
