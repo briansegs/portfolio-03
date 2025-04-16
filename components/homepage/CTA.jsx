@@ -13,7 +13,6 @@ const CTA = () => (
         src={bgHero}
         alt="Cta background"
         fill
-        quality={75}
         blur
         className="-z-10 object-cover object-center"
       />
