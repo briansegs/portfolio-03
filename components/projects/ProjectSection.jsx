@@ -135,6 +135,7 @@ const ProjectCard = () => {
             <ImageMedia
               src={project.imgUrl}
               alt={project.title}
+              blur
               className="size-full object-cover"
             />
           </div>

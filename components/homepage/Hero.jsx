@@ -59,7 +59,6 @@ const Hero = () => (
             width={650}
             height={720}
             priority
-            quality={75}
             className="h-[820px] w-[750px] mix-blend-screen max-[1600px]:h-[720px] max-[1600px]:w-[650px]"
           />
         </div>

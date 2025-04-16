@@ -56,6 +56,7 @@ const About = () => {
             alt="about-image"
             width={600}
             height={600}
+            blur
             className="object-contain"
           />
         </div>

@@ -27,6 +27,7 @@ const ExploreCard = ({
     <ImageMedia
       src={imgUrl}
       alt={title}
+      blur
       className="absolute size-full rounded-md object-cover"
     />
     {active !== id ? (
