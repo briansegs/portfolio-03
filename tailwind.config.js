@@ -10,8 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ["Mulish"],
-        secondary: ["Crimson"],
+        primary: ["var(--font-primary)", "sans-serif"],
+        secondary: ["var(--font-secondary)", "serif"],
       },
       colors: {
         primary: "#f87171",
