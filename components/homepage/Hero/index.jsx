@@ -6,12 +6,7 @@ import avatar from "@/assets/hero/avatar_03.webp";
 import bgHero from "@/assets/hero/bgHero.webp";
 import { heroData } from "@/constants";
 import { ImageMedia } from "@/components/ImageMedia";
-import dynamic from "next/dynamic";
-
-const ParticleContainer = dynamic(() => import("./ParticleContainer"), {
-  ssr: false,
-  loading: () => null,
-});
+import ParticleContainer from "./Hero.client";
 
 const { headingText, headingSubtext, buttonText } = heroData;
 
