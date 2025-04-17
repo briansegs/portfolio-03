@@ -21,7 +21,7 @@ const ExploreCard = ({
 }) => (
   <motion.div
     variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-    className={`relative ${active === id ? "flex-[10] lg:flex-[3.5]" : "flex-[2]  cursor-pointer lg:flex-[0.5]"} flex h-[700px] min-w-[170px] items-center transition-[flex] duration-[0.7s] ease-out xl:items-end`}
+    className={`relative ${active === id ? "flex-[10] lg:flex-[3.5]" : "flex-[2]  cursor-pointer lg:flex-[0.5]"} flex h-[700px] min-w-[170px] items-center transition-[flex] duration-700 ease-out xl:items-end`}
     onClick={() => handleClick(id)}
   >
     <ImageMedia
