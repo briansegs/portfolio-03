@@ -14,10 +14,10 @@ const Services = () => (
     {/* logos */}
     <div className="group relative flex justify-start gap-28 overflow-hidden">
       {/* gradient left */}
-      <div className="absolute left-0 top-0 z-10 hidden h-full w-64 bg-gradient-to-r from-white to-transparent sm:inline-block" />
+      <div className="absolute left-0 top-0 z-10 hidden h-full w-64 bg-linear-to-r from-white to-transparent sm:inline-block" />
 
       {/* gradient right */}
-      <div className="absolute right-0 top-0 z-10 hidden h-full w-64 bg-gradient-to-l from-white to-transparent sm:inline-block" />
+      <div className="absolute right-0 top-0 z-10 hidden h-full w-64 bg-linear-to-l from-white to-transparent sm:inline-block" />
 
       {/* logo slide */}
       <div className=" flex animate-slide gap-28">

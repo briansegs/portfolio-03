@@ -26,7 +26,7 @@ const SideMenu = () => {
       <div className="absolute inset-0 h-screen w-full bg-slate-950 opacity-75" />
 
       {/* Menu */}
-      <div className="absolute inset-x-[5%] top-9 mx-3 flex-col rounded-lg bg-white shadow-sm">
+      <div className="absolute inset-x-[5%] top-9 mx-3 flex-col rounded-lg bg-white shadow-xs">
         <div className="flex justify-end border-b border-gray-300 p-4 text-3xl">
           <RxCross1 className="cursor-pointer" onClick={handleClick} />
         </div>
@@ -54,7 +54,7 @@ const SideMenu = () => {
   ) : (
     <button
       onClick={handleClick}
-      className="flex size-14 cursor-pointer items-center justify-center rounded-lg bg-white shadow lg:hidden"
+      className="flex size-14 cursor-pointer items-center justify-center rounded-lg bg-white shadow-sm lg:hidden"
     >
       <div className="flex size-10 items-center justify-center rounded-md text-3xl hover:bg-secondary">
         <RxHamburgerMenu />

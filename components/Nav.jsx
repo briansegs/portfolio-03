@@ -11,7 +11,7 @@ const Nav = () => {
       <nav className="flex items-center justify-between">
         {/* Logo / Social links */}
         <div
-          className={`flex items-center gap-4 rounded-lg bg-white px-4 py-2 shadow`}
+          className={`flex items-center gap-4 rounded-lg bg-white px-4 py-2 shadow-sm`}
         >
           <Link href={"/"}>
             <div>
@@ -26,7 +26,7 @@ const Nav = () => {
         </div>
 
         {/* Navigation links */}
-        <div className="hidden items-center justify-center gap-4 rounded-md bg-white px-4 py-2 shadow lg:flex">
+        <div className="hidden items-center justify-center gap-4 rounded-md bg-white px-4 py-2 shadow-sm lg:flex">
           <div className="flex gap-6 rounded-lg">
             {navLinks.map((link) => (
               <Link href={link.path} key={link.name}>

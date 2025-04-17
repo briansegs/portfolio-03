@@ -116,14 +116,14 @@ const ProjectCard = () => {
                   <ProjectButton
                     href={project.gitUrl}
                     icon={<RxGithubLogo />}
-                    styles="bg-black/75 backdrop-blur-sm hover:bg-black/50"
+                    styles="bg-black/75 backdrop-blur-xs hover:bg-black/50"
                   />
                 </div>
                 <div className="">
                   <ProjectButton
                     href={project.liveUrl}
                     icon={<LuMonitor />}
-                    styles="bg-black/75 backdrop-blur-sm hover:bg-black/50"
+                    styles="bg-black/75 backdrop-blur-xs hover:bg-black/50"
                   />
                 </div>
               </div>
