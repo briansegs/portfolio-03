@@ -1,27 +1,17 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import { fadeIn } from "@/constants/motion";
-import { RxGithubLogo } from "react-icons/rx";
-import { LuMonitor } from "react-icons/lu";
-import Chip from "../../Chip";
-import ProjectButton from "../../projects/ProjectButton";
-import { ImageMedia } from "../../ImageMedia";
+import { fadeIn } from '@/constants/motion'
+import { motion } from 'framer-motion'
+import { LuMonitor } from 'react-icons/lu'
+import { RxGithubLogo } from 'react-icons/rx'
+import Chip from '../../Chip'
+import { ImageMedia } from '../../ImageMedia'
+import ProjectButton from '../../projects/ProjectButton'
 
-const ExploreCard = ({
-  id,
-  imgUrl,
-  title,
-  index,
-  active,
-  handleClick,
-  stack,
-  gitUrl,
-  liveUrl,
-}) => (
+const ExploreCard = ({ id, imgUrl, title, index, active, handleClick, stack, gitUrl, liveUrl }) => (
   <motion.div
-    variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-    className={`relative ${active === id ? "flex-10 lg:flex-[3.5]" : "flex-2  cursor-pointer lg:flex-[0.5]"} flex h-[700px] min-w-[170px] items-center transition-[flex] duration-700 ease-out xl:items-end`}
+    variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
+    className={`relative ${active === id ? 'flex-10 lg:flex-[3.5]' : 'flex-2 cursor-pointer lg:flex-[0.5]'} flex h-[700px] min-w-[170px] items-center transition-[flex] duration-700 ease-out xl:items-end`}
     onClick={() => handleClick(id)}
   >
     <ImageMedia
@@ -54,12 +44,7 @@ const ExploreCard = ({
 
         <div className="hidden flex-wrap gap-2 whitespace-nowrap lg:flex">
           {stack.map((tech, index) => (
-            <Chip
-              key={tech + index}
-              chipStyles="bg-secondary"
-              textStyles="text-black"
-              text={tech}
-            />
+            <Chip key={tech + index} chipStyles="bg-blue-50" textStyles="text-black" text={tech} />
           ))}
         </div>
         <h2 className="hidden text-xl font-bold text-white sm:mt-4 sm:text-3xl lg:block">
@@ -68,6 +53,6 @@ const ExploreCard = ({
       </div>
     )}
   </motion.div>
-);
+)
 
-export default ExploreCard;
+export default ExploreCard

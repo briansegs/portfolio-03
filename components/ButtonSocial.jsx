@@ -1,11 +1,9 @@
-import { Button } from "./ui/button";
-
 const ButtonSocial = ({ icon }) => {
   return (
-    <Button className="bg-transparent p-[7px] text-3xl text-black hover:bg-secondary">
+    <button className="cursor-pointer rounded-md bg-transparent p-[7px] text-3xl text-black hover:bg-blue-50">
       {icon}
-    </Button>
-  );
-};
+    </button>
+  )
+}
 
-export default ButtonSocial;
+export default ButtonSocial
