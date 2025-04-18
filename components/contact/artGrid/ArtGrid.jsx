@@ -1,12 +1,7 @@
-import dynamic from "next/dynamic";
 import { Grid2, Grid3, Grid4 } from ".";
 import { ImageMedia } from "@/components/ImageMedia";
 import grid1Image from "@/assets/contact/frame_01.webp";
-
-const Grid1 = dynamic(() => import("./Grid1"), {
-  ssr: false,
-  loading: () => null,
-});
+import Grid1 from "./ArtGrid.client";
 
 const frameSize = "size-72";
 
